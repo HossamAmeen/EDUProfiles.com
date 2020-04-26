@@ -1,0 +1,13 @@
+register 500
+login 100 
+profile
+edit 
+update
+
+cart 
+profile
+schools
+show students with school 300 
+
+
+
