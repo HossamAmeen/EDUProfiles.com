@@ -62,8 +62,8 @@
                                                 <div class="col-sm-12 row">
                                                     <div class="form-check col-sm-6">
                                                         <input class="form-check-input" type="radio" id="gridRadios1"
-                                                            value="Male" name="gender">
-                                                        <label class="form-check-label" for="gridRadios1">
+                                                            value="Male" name="gender" checked>
+                                                        <label class="form-check-label" for="gridRadios1" >
                                                             Male
                                                         </label>
                                                     </div>
@@ -137,7 +137,7 @@
                                                 :</label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" id="inputEmail3"
-                                                    placeholder="Nationality" name="nationality">
+                                                    placeholder="Nationality" name="Nationality_f">
                                             </div>
                                         </div>
 
@@ -166,8 +166,8 @@
                                         <div class="form-group row">
                                             <label for="inputEmail3" class="col-sm-5 col-form-label">Email:</label>
                                             <div class="col-sm-5">
-                                                <input type="text" class="form-control" id="inputEmail3"
-                                                    placeholder="Email" name="email">
+                                                <input type="email" class="form-control" id="inputEmail3"
+                                                    placeholder="Email" name="email" required>
                                             </div>
                                         </div>
 
@@ -187,7 +187,7 @@
                                             <label for="inputEmail3" class="col-sm-5 col-form-label">Password:</label>
                                             <div class="col-sm-5">
                                                 <input type="Password" class="form-control" id="inputEmail3"
-                                                    placeholder="Password" name="password">
+                                                    placeholder="Password" name="password" required>
                                             </div>
                                         </div>
 
@@ -292,23 +292,23 @@
                             <div class="col-lg-12">
                                 <div class="row">
 
-                                    <div class="col-lg-12">
+                                    {{-- <div class="col-lg-12">
                                         <div class="form-group row">
                                             <label for="inputEmail3" class="col-sm-6 col-form-label">Primary Contact
                                                 Email:</label>
                                             <div class="col-sm-6">
-                                                <input type="email" class="form-control" id="inputEmail3"
+                                                <input type="text" class="form-control" id="inputEmail3"
                                                     placeholder="First name" name="ContactEmail">
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="col-lg-12">
                                         <div class="form-group row">
                                             <label for="inputEmail3" class="col-sm-6 col-form-label">Will both parents
                                                 be living full-time in Egypt?</label>
                                             <div class="col-sm-6">
-                                                <input type="email" class="form-control" id="inputEmail3"
+                                                <input type="text" class="form-control" id="inputEmail3"
                                                     placeholder="Give Address If Not Living Full-Time In Egypt"
                                                     name="addressEgypt">
                                             </div>
@@ -513,7 +513,7 @@
                                                                 class="col-sm-6 col-form-label">E-Mail:</label>
                                                             <div class="col-sm-6">
                                                                 <input type="email" class="form-control"
-                                                                    id="inputEmail3" placeholder="E-Mail" name="E-Mail">
+                                                                    id="inputEmail3" placeholder="E-Mail" name="E_Mail">
                                                             </div>
                                                         </div>
 
@@ -524,7 +524,7 @@
                                                             <label for="inputEmail3"
                                                                 class="col-sm-6 col-form-label">Occupation:</label>
                                                             <div class="col-sm-6">
-                                                                <input type="email" class="form-control"
+                                                                <input type="text" class="form-control"
                                                                     id="inputEmail3" placeholder="Office Tel" name="Occupation">
                                                             </div>
                                                         </div>
@@ -536,7 +536,7 @@
                                                             <label for="inputEmail3"
                                                                 class="col-sm-6 col-form-label">SSN:</label>
                                                             <div class="col-sm-6">
-                                                                <input type="email" class="form-control"
+                                                                <input type="text" class="form-control"
                                                                     id="inputEmail3" placeholder="SSN" name="SSN_f">
                                                             </div>
                                                         </div>
@@ -578,7 +578,7 @@
                                                             <label for="inputEmail3"
                                                                 class="col-sm-6 col-form-label">Firstname:</label>
                                                             <div class="col-sm-6">
-                                                                <input type="email" class="form-control"
+                                                                <input type="text" class="form-control"
                                                                     id="inputEmail3" placeholder="Firstname" name="Firstname_m">
                                                             </div>
                                                         </div>
@@ -589,7 +589,7 @@
                                                             <label for="inputEmail3"
                                                                 class="col-sm-6 col-form-label">Surname:</label>
                                                             <div class="col-sm-6">
-                                                                <input type="email" class="form-control"
+                                                                <input type="text" class="form-control"
                                                                     id="inputEmail3" placeholder="Surname" name="Surname_m">
                                                             </div>
                                                         </div>
@@ -600,7 +600,7 @@
                                                             <label for="inputEmail3"
                                                                 class="col-sm-6 col-form-label">Lastname:</label>
                                                             <div class="col-sm-6">
-                                                                <input type="email" class="form-control"
+                                                                <input type="text" class="form-control"
                                                                     id="inputEmail3" placeholder="Lastname" name="Lastname_m">
                                                             </div>
                                                         </div>
@@ -611,7 +611,7 @@
                                                             <label for="inputEmail3"
                                                                 class="col-sm-6 col-form-label">Nationality :</label>
                                                             <div class="col-sm-6">
-                                                                <input type="email" class="form-control"
+                                                                <input type="text" class="form-control"
                                                                     id="inputEmail3" placeholder="Nationality" name="Nationality_m">
                                                             </div>
                                                         </div>
@@ -622,7 +622,7 @@
                                                             <label for="inputEmail3"
                                                                 class="col-sm-6 col-form-label">Religion:</label>
                                                             <div class="col-sm-6">
-                                                                <input type="email" class="form-control"
+                                                                <input type="text" class="form-control"
                                                                     id="inputEmail3" placeholder="Religion" name="Religion_m">
                                                             </div>
                                                         </div>
@@ -633,7 +633,7 @@
                                                             <label for="inputEmail3"
                                                                 class="col-sm-6 col-form-label">Mobile:</label>
                                                             <div class="col-sm-6">
-                                                                <input type="email" class="form-control"
+                                                                <input type="text" class="form-control"
                                                                     id="inputEmail3" placeholder="Mobile" name="Mobile_m">
                                                             </div>
                                                         </div>
@@ -644,7 +644,7 @@
                                                             <label for="inputEmail3"
                                                                 class="col-sm-6 col-form-label">City:</label>
                                                             <div class="col-sm-6">
-                                                                <input type="email" class="form-control"
+                                                                <input type="text" class="form-control"
                                                                     id="inputEmail3" placeholder="City" name="City_m">
                                                             </div>
                                                         </div>
@@ -667,7 +667,7 @@
                                                             <label for="inputEmail3"
                                                                 class="col-sm-6 col-form-label">Occupation:</label>
                                                             <div class="col-sm-6">
-                                                                <input type="email" class="form-control"
+                                                                <input type="text" class="form-control"
                                                                     id="inputEmail3" placeholder="Office Tel" name="Occupation_m">
                                                             </div>
                                                         </div>
@@ -679,7 +679,7 @@
                                                             <label for="inputEmail3"
                                                                 class="col-sm-6 col-form-label">SSN:</label>
                                                             <div class="col-sm-6">
-                                                                <input type="email" class="form-control"
+                                                                <input type="text" class="form-control"
                                                                     id="inputEmail3" placeholder="SSN" name="SSN_m">
                                                             </div>
                                                         </div>
@@ -1242,21 +1242,7 @@
 
 
 
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/counterup/counterup.min.js"></script>
-    <script src="assets/vendor/venobox/venobox.min.js"></script>
-    <script src="assets/vendor/mobile-nav/mobile-nav.js"></script>
-    <script src="assets/vendor/wow/wow.min.js"></script>
-    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-
+    @include('foot')
 </body>
 
 </html>

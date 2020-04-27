@@ -29,6 +29,21 @@ class HomeController extends Controller
         return view('register_school');
     }
 
+    public function registerStudent(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            if(isset($request->contract))
+            $request['contract'] = $this->storeFile($request->contract);
+            if(isset($request->photo))
+            $request['photo'] = $this->storeFile($request->photo);
+            $request['password'] =bcrypt($request->password);
+            $student = Student::create($request->all());
+
+            return  redirect('profile-student/'.$student->id);
+        }
+        return view('register_student');
+    }
+
     public function LoginSchool(Request $request)
     {
         $school = School::where('email', $request->email)->first();
@@ -41,14 +56,36 @@ class HomeController extends Controller
         // return back()->withErrors('login' , "email or password is incorrect");
         return view('about');
     }
+    public function LoginStudent(Request $request)
+    {
+        $student = Student::where('email', $request->email)->first();
+        if (Student::where('email', $request->email)->exists()
+        && Hash::check($request->password , $student->password)){
+            session(['school_id' => $student->id]);
+            return  redirect('profile-student/'.$student->id);
+        }
+        $request->session()->flash('login' , "email or password is incorrect");
+        // return back()->withErrors('login' , "email or password is incorrect");
+        return view('about_student');
+    }
+
     public function aboutSchool(Request $request)
     {
         return view('about');
+    }
+    public function aboutStudent()
+    {
+        return view('about_student');
     }
     public function schoolProfile($id)
     {
         $school =  School::findOrFail($id) ;
         return view("schhool_profile" , compact('school' , 'id'));
+    }
+    public function studentProfile($id)
+    {
+        $student =  Student::findOrFail($id) ;
+        return view("student_profile" , compact('student' , 'id'));
     }
     public function editSchool($id)
     {
@@ -76,19 +113,7 @@ class HomeController extends Controller
 
         return  redirect('profile-school/'.$school->id);
     }
-    public function registerStudent(Request $request)
-    {
-        if ($request->isMethod('post')) {
-            if(isset($request->contract))
-            $request['contract'] = $this->storeFile($request->contract);
-            if(isset($request->photo))
-            $request['photo'] = $this->storeFile($request->photo);
-            Student::create($request->all());
 
-            return redirect(route('home'));
-        }
-        return view('register_student');
-    }
     public function home()
     {
         $schools = School::get()->take(3);
