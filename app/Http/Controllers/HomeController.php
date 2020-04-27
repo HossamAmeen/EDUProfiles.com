@@ -5,27 +5,76 @@ namespace App\Http\Controllers;
 use App\School;
 use App\Student;
 use Illuminate\Http\Request;
-
+use Hash;
 class HomeController extends Controller
 {
+    /////////// if (User::where('name', $request->name)->exists()  && Hash::check($request->password , $user->password))
     public function registerSchool(Request $request)
     {
         if ($request->isMethod('post')) {
-            if(isset($request->contract))
-            $request['contract'] = $this->storeFile($request->contract);
-            if(isset($request->photo))
-            $request['photo'] = $this->storeFile($request->photo);
+            if(isset($request->contract_file))
+            $request['contract'] = $this->storeFile($request->contract_file);
+            if(isset($request->photo_file))
+            {
+
+                $request['photo'] = $this->storeFile($request->photo_file);
+            }
+
+            $request['password'] =bcrypt($request->password);
             $school =  School::create($request->all());
+            session(['school_id' => $school->id]);
             return  redirect('profile-school/'.$school->id);
 
         }
         return view('register_school');
     }
 
+    public function LoginSchool(Request $request)
+    {
+        $school = School::where('email', $request->email)->first();
+        if (School::where('email', $request->email)->exists()
+        && Hash::check($request->password , $school->password)){
+            session(['school_id' => $school->id]);
+            return  redirect('profile-school/'.$school->id);
+        }
+        $request->session()->flash('login' , "email or password is incorrect");
+        // return back()->withErrors('login' , "email or password is incorrect");
+        return view('about');
+    }
+    public function aboutSchool(Request $request)
+    {
+        return view('about');
+    }
     public function schoolProfile($id)
     {
-       $school =  School::findOrFail($id) ;
-        return view("schhool_profile" , compact('school'));
+        $school =  School::findOrFail($id) ;
+        return view("schhool_profile" , compact('school' , 'id'));
+    }
+    public function editSchool($id)
+    {
+        $school =  School::findOrFail($id) ;
+        return view("school_edit" , compact('school' , 'id'));
+    }
+    public function updateSchool( $id , Request $request)
+    {
+        $requestArray = $request->all();
+        if(isset($request->contract_file))
+        $requestArray['contract'] = $this->storeFile($request->contract_file);
+        if(isset($request->photo_file))
+        {
+
+            $requestArray['photo'] = $this->storeFile($request->photo_file);
+        }
+
+        if(isset($requestArray['password']) && $requestArray['password'] != ""){
+            $requestArray['password'] =  bcrypt($requestArray['password']);
+        }else{
+            unset($requestArray['password']);
+        }
+        $school =  School::findOrFail($id);
+        $school->update($requestArray) ;
+
+        return  redirect('profile-school/'.$school->id);
     }
     public function registerStudent(Request $request)
     {
@@ -42,7 +91,13 @@ class HomeController extends Controller
     }
     public function home()
     {
-        return view('home');
+        $schools = School::get()->take(3);
+        return view('home' , compact('schools'));
+    }
+    public function showSchools()
+    {
+        $schools = School::get();
+        return view('show_schools', compact('schools'));
     }
     protected function storeFile($photo)
     {

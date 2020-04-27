@@ -311,21 +311,21 @@
 
                                     </div>
                                     <div class="col-lg-12">
-                                        <form class="file" action="">
+
                                             <label for="myfile" class="col-sm-12 text">Copies of the school lease or
                                                 ownership contract (Will not appear):</label>
-                                            <input type="file" id="myfile" class="control" name="contract" value="Upload"><br>
+                                            <input type="file" id="myfile" class="control" name="contract_file" ><br>
                                             {{-- <input type="submit" value="Upload" name="" class="btn"> --}}
-                                        </form>
+
 
                                     </div>
                                     <div class="col-lg-12">
-                                        <form class="file" action="">
+
                                             <label for="myfile" class="col-sm-12 ">Upload photo or video about the
                                                 school:</label>
-                                            <input type="file" id="myfile" class="control" name="photo" value="Upload"><br>
+                                            <input type="file" id="myfile" class="control" name="photo_file" ><br>
                                             {{-- <input type="submit" value="Upload" name="" class="btn"> --}}
-                                        </form>
+
 
                                     </div>
                                     <div class="submit">

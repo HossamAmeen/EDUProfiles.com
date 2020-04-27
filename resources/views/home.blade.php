@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Rapid Bootstrap Template - Index</title>
+    <title>EDUProfiles</title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
 
@@ -63,9 +63,7 @@
                             <a class="nav-link" href="#services">Services</a>
 
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Signup.html">Signup/login</a>
-                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#footer">Contact Us</a>
                         </li>
@@ -92,8 +90,8 @@
                             <h1 class="title">EDU <span> Profiles</span></h1>
                             <h4>We Are Here For You</h4>
                             <p>You Will Find All You Need Here</p>
-                            <a class="btn btn-info" href="about-stu.html">Student</a>
-                            <a class="btn btn-info" href="about-sch.html">School</a>
+                        <a class="btn btn-info" href="{{url('about-student')}}">Student</a>
+                        <a class="btn btn-info" href="{{url('about-school')}}">School</a>
 
                         </div>
                     </div>
@@ -236,68 +234,27 @@
                         </header>
 
                         <div class="row">
+                            @foreach ($schools as $item)
                             <div class="col-lg-4">
                                 <div class="card-wrapper" style="margin-bottom: 20px;">
                                     <div class="img-wrapper">
-                                        <img src="{{asset('assets/img/school2.jpeg')}}" class="img" />
+                                        <img src="{{asset($item->photo ?? 'assets/img/school2.jpeg')}}" class="img" />
                                         <div class="icon-wrapper">
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                     <div class="info-wrapper">
-                                        <h4 class="title"> School Name</h4>
+                                        <h4 class="title"> {{$item->name}}</h4>
                                         <p class="content">
-                                            Risus nec luctus mauris orci auctor purus euismod pretium
-                                            purus pretium ligula rutrum tempor sapien and luctus
+                                          {{$item->about}}
                                         </p>
-                                        <a href="profilesch.html" class="normal_link">Go to school profile</a>
+                                    <a href="{{url('profile-school/'.$item->id)}}" class="normal_link">Go to school profile</a>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
 
-                            <div class="col-lg-4">
-                                <div class="card-wrapper" style="margin-bottom: 20px;">
-                                    <div class="img-wrapper">
-                                        <img src="{{asset('assets/img/school2.jpeg')}}" class="img" />
-                                        <div class="icon-wrapper">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                    <div class="info-wrapper">
-                                        <h4 class="title"> School Name</h4>
-                                        <p class="content">
-                                            Risus nec luctus mauris orci auctor purus euismod pretium
-                                            purus pretium ligula rutrum tempor sapien and luctus
-                                        </p>
-                                        <a href="profilesch.html" class="normal_link">Go to school profile</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <div class="card-wrapper" style="margin-bottom: 20px;">
-                                    <div class="img-wrapper">
-                                        <img src="{{asset('assets/img/school2.jpeg')}}" class="img" />
-                                        <div class="icon-wrapper">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                    <div class="info-wrapper">
-                                        <h4 class="title"> School Name</h4>
-                                        <p class="content">
-                                            Risus nec luctus mauris orci auctor purus euismod pretium
-                                            purus pretium ligula rutrum tempor sapien and luctus
-                                        </p>
-                                        <a href="profilesch.html" class="normal_link">Go to school profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12"><a href="profile.html" class="btn">More</a></div>
-
-
-
-
-
+                        <div class="col-lg-12"><a href="{{url('show-schools')}}" class="btn">More</a></div>
                         </div>
 
                     </div>

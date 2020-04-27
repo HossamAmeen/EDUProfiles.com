@@ -91,9 +91,10 @@
                                                     </div>
                                                     <!--body-->
                                                 </div>
+
                                             </div>
                                             <!--card-->
-
+                                        <a href="{{url('profile-school-edit/'.$id)}}"  class="btn btn-info" >edit</a>
                                         </div>
 
 
@@ -418,7 +419,7 @@
                                                         <div class="row">
                                                             <div class="col-lg-12">
                                                                 <div class="form-group row">
-                                                                    <img src="{{asset($school->paper_required)}}" class="col-lg-4">
+                                                                    <img src="{{asset($school->contract)}}" class="col-lg-4">
                                                                     {{-- <img src="assets/img/card3.jpg" class="col-lg-4">
                                                                     <img src="assets/img/card3.jpg" class="col-lg-4">
                                                                     <img src="assets/img/card3.jpg" class="col-lg-4">
