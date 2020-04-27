@@ -137,7 +137,7 @@ class HomeController extends Controller
         }
         $student =  Student::findOrFail($id);
         $student->update($requestArray) ;
-        return back();
+        // return back();
         return  redirect('profile-student/'.$student->id);
     }
 
