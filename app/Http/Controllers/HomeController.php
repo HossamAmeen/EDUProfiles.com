@@ -111,7 +111,34 @@ class HomeController extends Controller
         $school =  School::findOrFail($id);
         $school->update($requestArray) ;
 
-        return  redirect('profile-school/'.$school->id);
+        return  redirect('profile-student/'.$school->id);
+    }
+
+    public function editStudent($id)
+    {
+        $student =  Student::findOrFail($id) ;
+        return view("edit-student" , compact('student' , 'id'));
+    }
+    public function updateStudent( $id , Request $request)
+    {
+        $requestArray = $request->all();
+        if(isset($request->contract_file))
+        $requestArray['contract'] = $this->storeFile($request->contract_file);
+        if(isset($request->photo_file))
+        {
+
+            $requestArray['photo'] = $this->storeFile($request->photo_file);
+        }
+
+        if(isset($requestArray['password']) && $requestArray['password'] != ""){
+            $requestArray['password'] =  bcrypt($requestArray['password']);
+        }else{
+            unset($requestArray['password']);
+        }
+        $student =  Student::findOrFail($id);
+        $student->update($requestArray) ;
+        return back();
+        return  redirect('profile-student/'.$student->id);
     }
 
     public function home()

@@ -7,7 +7,8 @@ Route::post('profile-school-update/{id}', 'HomeController@updateSchool')->name('
 Route::get('profile-school-edit/{id}', 'HomeController@editSchool')->name('profile-school');
 
 Route::get('profile-student/{id}', 'HomeController@studentProfile')->name('profile-student');
-
+Route::post('profile-student-update/{id}', 'HomeController@updateStudent')->name('profile-school');
+Route::get('profile-student-edit/{id}', 'HomeController@editStudent')->name('profile-school');
 
 Route::get('about-school', 'HomeController@aboutSchool');
 Route::get('about-student', 'HomeController@aboutStudent');

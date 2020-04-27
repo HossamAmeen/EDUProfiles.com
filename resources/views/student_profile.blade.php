@@ -77,7 +77,7 @@
                                     <div class="col-sm-3">
                                         <p>{{$student->email}}</p>
                                     </div>
-                                    <input type="submit" value="Edit" name="" class="btn col-sm-3">
+                                    <a href="{{url('profile-student-edit/'.$id)}}"  class="btn btn-info" >edit</a>
                                 </div>
 
 
