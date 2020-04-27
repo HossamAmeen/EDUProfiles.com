@@ -188,8 +188,7 @@
                                             <label for="inputEmail3" class="col-sm-5 col-form-label">Address:</label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" id="inputEmail3"
-                                                    placeholder="Address" name="address"
-                                                    value="{{$student->address}}">
+                                                    placeholder="Address" name="address" value="{{$student->address}}">
                                             </div>
                                         </div>
 
@@ -199,7 +198,7 @@
                                             <label for="inputEmail3" class="col-sm-5 col-form-label">Password:</label>
                                             <div class="col-sm-5">
                                                 <input type="Password" class="form-control" id="inputEmail3"
-                                                    placeholder="Password" name="password" >
+                                                    placeholder="Password" name="password">
                                             </div>
                                         </div>
 
@@ -755,11 +754,12 @@
                                                                 <label for="inputEmail4">Number of silibings</label>
                                                                 <input type="number" class="form-control"
                                                                     id="inputEmail4" placeholder="Number"
-                                                            name="silibings_number" value="{{$student->silibings_number}}">
+                                                                    name="silibings_number"
+                                                                    value="{{$student->silibings_number}}">
                                                             </div>
                                                             <div class="form-group col-md-12">
                                                                 <textarea class='form-control' name='silibings' rows='7'
-                                                            placeholder='Enter Name , Age , school and Year (optional)'>{{$student->silibings}}</textarea>
+                                                                    placeholder='Enter Name , Age , school and Year (optional)'>{{$student->silibings}}</textarea>
                                                             </div>
 
 
@@ -864,6 +864,7 @@
                                                                         education psychologist or any other specialist?
                                                                     </label>
                                                                 </div>
+                                                                {{-- </div> --}}
                                                             </div>
                                                             <div class="col-sm-12">
                                                                 <div class="form-check">
