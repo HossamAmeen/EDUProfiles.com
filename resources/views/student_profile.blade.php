@@ -77,7 +77,7 @@
                                     <div class="col-sm-3">
                                         <p>{{$student->email}}</p>
                                     </div>
-                                    @if(isset(session('student_id')))
+                                    @if(session('student_id')!== null)
                                     <a href="{{url('profile-student-edit/'.$id)}}"  class="btn btn-info" >edit</a>
                                     @endif
                                 </div>
