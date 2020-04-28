@@ -119,8 +119,8 @@
                             <div class="content-wrapper">
                                 <h2 class="title">EDU <span>for You</span></h2>
                                 <p>All You Need Here</p>
-                                <a class="btn btn-info" href="#about">Student</a>
-                                <a class="btn btn-info" href="#about">School</a>
+                                <a class="btn btn-info" href="{{url('about-student')}}">Student</a>
+                                <a class="btn btn-info" href="{{url('about-school')}}">School</a>
 
                             </div>
                         </div>
