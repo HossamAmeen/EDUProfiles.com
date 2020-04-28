@@ -93,8 +93,6 @@
                         {{-- <a class="btn btn-info" href="{{url('about-student')}}">Student</a>
                         <a class="btn btn-info" href="{{url('about-school')}}">School</a> --}}
 
-                        <a class="btn btn-info" href="{{url('about-student')}}">Student</a>
-                        <a class="btn btn-info" href="{{url('about-school')}}">School</a>
 
                         </div>
                     </div>
