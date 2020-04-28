@@ -144,7 +144,7 @@ class HomeController extends Controller
     public function home()
     {
         $schools = School::get()->take(3);
-        return view('home' , compact('schools'));
+        return view('homenew' , compact('schools'));
     }
     public function showSchools()
     {
