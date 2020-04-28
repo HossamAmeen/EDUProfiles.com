@@ -38,7 +38,7 @@ class HomeController extends Controller
             $request['photo'] = $this->storeFile($request->photo);
             $request['password'] =bcrypt($request->password);
             $student = Student::create($request->all());
-
+            session(['student_id' => $school->id]);
             return  redirect('profile-student/'.$student->id);
         }
         return view('register_student');

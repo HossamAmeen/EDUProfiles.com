@@ -94,7 +94,9 @@
 
                                             </div>
                                             <!--card-->
-                                        <a href="{{url('profile-school-edit/'.$id)}}"  class="btn btn-info" >edit</a>
+
+                                            @if(session('school_id') != null)
+                                        <a href="{{url('profile-school-edit/'.$id)}}"  class="btn btn-info" >edit</a> @endif
                                         </div>
 
 
