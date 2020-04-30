@@ -53,7 +53,7 @@
                     </span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
+                {{-- <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About Us</a>
@@ -67,7 +67,7 @@
                         </li>
 
                     </ul>
-                </div>
+                </div> --}}
 
             </nav>
 
