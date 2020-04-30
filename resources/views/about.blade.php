@@ -106,12 +106,16 @@
                         <div class="inline-content inline">
                             <h6>About School</h6>
                             <h3>Read More About School</h3>
-                            <p>Risus nec luctus mauris orci auctor purus euismod pretium
-                                purus pretium ligula rutrum tempor sapien and luctus
-                                Risus nec luctus mauris orci auctor purus euismod pretium
-                                purus pretium ligula rutrum tempor sapien and luctus
-                                Risus nec luctus mauris orci auctor purus euismod pretium
-                                purus pretium ligula rutrum tempor sapien and luctus</p>
+                            <p>We are providing this online service to avoid crowding while admission time and
+                                the problems that happen because Insufficient awareness of the required information .
+                                Once the user logs in or sign up , there is a notification will appear for the school
+                                that the user has chosen with their private file that have all the required information
+                                to decide the Accept or reject the request based on the conditions then send the
+                                decision .
+                                if the student accepted then the school will send the first approval and all the details
+                                about
+                                tests and interviews and the the user know all the information about the bus and uniform
+                                and can reserve it</p>
 
                         </div>
 
