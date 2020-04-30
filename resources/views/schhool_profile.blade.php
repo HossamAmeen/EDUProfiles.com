@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title text-center">
-                        <h1>Rouary school</h1>
+                        <h1>{{$school->name}} school</h1>
                     </div>
                 </div>
                 <!--col-->
