@@ -80,6 +80,7 @@
                                     @if(session('student_id')!== null)
                                     <a href="{{url('profile-student-edit/'.$id)}}"  class="btn btn-info" >edit</a>
                                     @endif
+                                    <a href="{{url('/')}}"  class="btn btn-info" >home</a>
                                 </div>
 
 
