@@ -90,8 +90,8 @@
                             <h1 class="title">EDU <span> Profiles</span></h1>
                             <h4>We Are Here For You</h4>
                             <p>You Will Find All You Need Here</p>
-                        {{-- <a class="btn btn-info" href="{{url('about-student')}}">Student</a>
-                        <a class="btn btn-info" href="{{url('about-school')}}">School</a> --}}
+                            <a class="btn btn-info" href="{{url('about-student')}}">Student</a>
+                            <a class="btn btn-info" href="{{url('about-school')}}">School</a>
 
 
                         </div>

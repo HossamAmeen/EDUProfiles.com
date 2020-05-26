@@ -773,7 +773,7 @@
                                                             <div class="col-sm-12">
                                                                 <div class="form-check">
                                                                     <input class="form-check-input" type="checkbox"
-                                                                        id="gridCheck1" name="medical_information" value="Diabetes">
+                                                                        id="gridCheck1" name="medical_information[]" value="Diabetes">
                                                                     <label class="form-check-label" for="gridCheck1">
                                                                         Diabetes
                                                                     </label>
@@ -782,7 +782,7 @@
                                                             <div class="col-sm-12">
                                                                 <div class="form-check">
                                                                     <input class="form-check-input" type="checkbox"
-                                                                        id="gridCheck1" name="medical_information" value="Epilepsy">
+                                                                        id="gridCheck1" name="medical_information[]" value="Epilepsy">
                                                                     <label class="form-check-label" for="gridCheck1">
                                                                         Epilepsy
                                                                     </label>
@@ -791,7 +791,7 @@
                                                             <div class="col-sm-12">
                                                                 <div class="form-check">
                                                                     <input class="form-check-input" type="checkbox"
-                                                                        id="gridCheck1" name="medical_information" value="Allergies">
+                                                                        id="gridCheck1" name="medical_information[]" value="Allergies">
                                                                     <label class="form-check-label" for="gridCheck1">
                                                                         Allergies
                                                                     </label>
@@ -800,7 +800,7 @@
                                                             <div class="col-sm-12">
                                                                 <div class="form-check">
                                                                     <input class="form-check-input" type="checkbox"
-                                                                        id="gridCheck1" name="medical_information" value="Bronchial Asthma">
+                                                                        id="gridCheck1" name="medical_information[]" value="Bronchial Asthma">
                                                                     <label class="form-check-label" for="gridCheck1">
                                                                         Bronchial Asthma
                                                                     </label>
@@ -809,7 +809,7 @@
                                                             <div class="col-sm-12">
                                                                 <div class="form-check">
                                                                     <input class="form-check-input" type="checkbox"
-                                                                        id="gridCheck1" name="medical_information" value="Does the student wear eyeglasses?">
+                                                                        id="gridCheck1" name="medical_information[]" value="Does the student wear eyeglasses?">
                                                                     <label class="form-check-label" for="gridCheck1">
                                                                         Does the student wear eyeglasses?
                                                                     </label>
@@ -818,7 +818,7 @@
                                                             <div class="col-sm-12">
                                                                 <div class="form-check">
                                                                     <input class="form-check-input" type="checkbox"
-                                                                        id="gridCheck1" name="medical_information" value="other">
+                                                                        id="gridCheck1" name="medical_information[]" value="other">
                                                                     <label class="form-check-label" for="gridCheck1">
                                                                         Has the student ever been assessed by an
                                                                         education psychologist or any other specialist?
@@ -841,7 +841,7 @@
                                                                     <label for="myfile">Select a Picture of medical
                                                                         certificate :</label>
                                                                     <input type="file" id="myfile" class="control"
-                                                                        name="medical_information_image"><br>
+                                                                        name="medical_information_images"><br>
 
 
 
@@ -971,7 +971,7 @@
                                                                 from the transferring school stating the grades that the
                                                                 student was enrolled in since joining the school
                                                                 :</label>
-                                                            <input type="file" id="myfile" class="control" name="historical"><br>
+                                                            <input type="file" id="myfile" class="control" name="historicals"><br>
                                                             {{--   --}}
 
 
@@ -982,7 +982,7 @@
                                                             <label for="myfile" class="col-sm-12">2- Statement of
                                                                 enrolment or statement of success sealed by the
                                                                 educational administration:</label>
-                                                            <input type="file" id="myfile" class="control" name="Statement_enrolment"><br>
+                                                            <input type="file" id="myfile" class="control" name="Statement_enrolments"><br>
                                                             {{--   --}}
 
 
@@ -995,7 +995,7 @@
                                                                 educational
                                                                 department affiliating this school to "New school name
                                                                 ":</label>
-                                                            <input type="file" id="myfile" class="control" name="Transfer"><br>
+                                                            <input type="file" id="myfile" class="control" name="Transfers"><br>
                                                             {{--   --}}
 
 
@@ -1008,7 +1008,7 @@
                                                                 be sealed from the governorate’s central educational
                                                                 department as well as the new central educational
                                                                 department :</label>
-                                                            <input type="file" id="myfile" class="control" name="transfers"><br>
+                                                            <input type="file" id="myfile" class="control" name="transferss"><br>
                                                             {{--   --}}
 
 
@@ -1019,7 +1019,7 @@
                                                             <label for="myfile" class="col-sm-12">5- Printout of the
                                                                 electronic transfer document sealed by the transferring
                                                                 school :</label>
-                                                            <input type="file" id="myfile" class="control" name="Printout"><br>
+                                                            <input type="file" id="myfile" class="control" name="Printouts"><br>
                                                             {{--   --}}
 
 
@@ -1064,7 +1064,7 @@
                                                                 the transferring country as well as the embassy of this
                                                                 country in Egypt and the Egyptian Ministry of Foreign
                                                                 Affairs.:</label>
-                                                            <input type="file" id="myfile" class="control" name="Enrolment"><br>
+                                                            <input type="file" id="myfile" class="control" name="Enrolments"><br>
 
 
 
@@ -1079,7 +1079,7 @@
                                                                 the transferring country as well as the embassy of this
                                                                 country in Egypt and the Egyptian Ministry of Foreign
                                                                 Affairs:</label>
-                                                            <input type="file" id="myfile" class="control" name="degree"><br>
+                                                            <input type="file" id="myfile" class="control" name="degrees"><br>
 
 
 
@@ -1092,7 +1092,7 @@
                                                                 Egyptian students returning from abroad as well as copy
                                                                 of the passport with the entrance stamp to
                                                                 Egypt:</label>
-                                                            <input type="file" id="myfile" class="control" name="entrance"><br>
+                                                            <input type="file" id="myfile" class="control" name="entrances"><br>
 
 
 
@@ -1145,7 +1145,7 @@
                                                             <label for="myfile" class="col-sm-12">2- Legal Arabic
                                                                 translation of the birth certificate attested by the
                                                                 Egyptian Ministry of Foreign Affairs:</label>
-                                                            <input type="file" id="myfile" class="control" name=""><br>
+                                                            <input type="file" id="myfile" class="control" name="ministrys"><br>
 
 
 
@@ -1167,7 +1167,7 @@
                                                             <label for="myfile" class="col-sm-12">4- No objection letter
                                                                 to study at the school from the embassy of the student’s
                                                                 country in Egypt :</label>
-                                                            <input type="file" id="myfile" class="control" name="objection_letter"><br>
+                                                            <input type="file" id="myfile" class="control" name="objection_letters"><br>
                                                             {{--   --}}
 
 

@@ -21,8 +21,9 @@
                 <div class="col-lg-12">
                     <div class="images">
 
-                        {{-- <img src="{{ asset( isset($school->photo) ? $school->photo : 'assets/img/school2.jpeg' )}} " > --}}
-                        <img src="{{ asset(  $school->photo ?? 'assets/img/school2.jpeg' )}} " >
+                        {{-- <img src="{{ asset( isset($school->photo) ? $school->photo : 'assets/img/school2.jpeg' )}}
+                        " > --}}
+                        <img src="{{ asset(  $school->photo ?? 'assets/img/school2.jpeg' )}} ">
                     </div>
                 </div>
                 <!--col-->
@@ -59,23 +60,28 @@
 
                                 <div class="contents row ">
                                     <div class="col-lg-12">
-                                        <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                                        <div class="accordion md-accordion" id="accordionEx" role="tablist"
+                                            aria-multiselectable="true">
 
                                             <div class="card">
 
                                                 <!-- Card header -->
                                                 <div class="card-header" role="tab" id="headingOne1">
-                                                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseeight8" aria-expanded="true" aria-controls="collapseeight8">
+                                                    <a data-toggle="collapse" data-parent="#accordionEx"
+                                                        href="#collapseeight8" aria-expanded="true"
+                                                        aria-controls="collapseeight8">
                                                         <h5 class="mb-0 row">
                                                             <p class="col-sm-6">Assistant and teacher team </p>
-                                                            <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
+                                                            <i
+                                                                class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
 
                                                         </h5>
                                                     </a>
                                                 </div>
                                                 <!-- card-header-->
                                                 <!-- Card body -->
-                                                <div id="collapseeight8" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                                <div id="collapseeight8" class="collapse" role="tabpanel"
+                                                    aria-labelledby="headingOne1" data-parent="#accordionEx">
                                                     <div class="card-body">
                                                         <div class="row">
                                                             <div class="col-lg-12">
@@ -96,8 +102,9 @@
                                             <!--card-->
 
                                             @if(session('school_id') != null)
-                                        <a href="{{url('profile-school-edit/'.$id)}}"  class="btn btn-info" >edit</a> @endif
-                                        <a href="{{url('/')}}"  class="btn btn-info" >home</a>
+                                            <a href="{{url('profile-school-edit/'.$id)}}" class="btn btn-info">edit</a>
+                                            @endif
+                                            <a href="{{url('/')}}" class="btn btn-info">home</a>
                                         </div>
 
 
@@ -169,22 +176,27 @@
 
                                 <div class="contents row ">
                                     <div class="col-lg-12">
-                                        <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                                        <div class="accordion md-accordion" id="accordionEx" role="tablist"
+                                            aria-multiselectable="true">
                                             <div class="card">
 
                                                 <!-- Card header -->
                                                 <div class="card-header" role="tab" id="headingOne1">
-                                                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                                    <a data-toggle="collapse" data-parent="#accordionEx"
+                                                        href="#collapseOne1" aria-expanded="true"
+                                                        aria-controls="collapseOne1">
                                                         <h5 class="mb-0 row">
                                                             <p class="col-sm-6">School history</p>
-                                                            <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
+                                                            <i
+                                                                class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
 
                                                         </h5>
                                                     </a>
                                                 </div>
                                                 <!-- card-header-->
                                                 <!-- Card body -->
-                                                <div id="collapseOne1" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                                <div id="collapseOne1" class="collapse" role="tabpanel"
+                                                    aria-labelledby="headingOne1" data-parent="#accordionEx">
                                                     <div class="card-body">
                                                         <div class="row">
                                                             <div class="col-lg-12">
@@ -207,17 +219,21 @@
 
                                                 <!-- Card header -->
                                                 <div class="card-header" role="tab" id="headingOne1">
-                                                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapsetwo2" aria-expanded="true" aria-controls="collapsetwo2">
+                                                    <a data-toggle="collapse" data-parent="#accordionEx"
+                                                        href="#collapsetwo2" aria-expanded="true"
+                                                        aria-controls="collapsetwo2">
                                                         <h5 class="mb-0 row">
                                                             <p class="col-sm-6">Mission and vision</p>
-                                                            <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
+                                                            <i
+                                                                class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
 
                                                         </h5>
                                                     </a>
                                                 </div>
                                                 <!-- card-header-->
                                                 <!-- Card body -->
-                                                <div id="collapsetwo2" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                                <div id="collapsetwo2" class="collapse" role="tabpanel"
+                                                    aria-labelledby="headingOne1" data-parent="#accordionEx">
                                                     <div class="card-body">
                                                         <div class="row">
                                                             <div class="col-lg-12">
@@ -240,17 +256,21 @@
 
                                                 <!-- Card header -->
                                                 <div class="card-header" role="tab" id="headingOne1">
-                                                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapsethree3" aria-expanded="true" aria-controls="collapsethree3">
+                                                    <a data-toggle="collapse" data-parent="#accordionEx"
+                                                        href="#collapsethree3" aria-expanded="true"
+                                                        aria-controls="collapsethree3">
                                                         <h5 class="mb-0 row">
                                                             <p class="col-sm-6">Community</p>
-                                                            <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
+                                                            <i
+                                                                class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
 
                                                         </h5>
                                                     </a>
                                                 </div>
                                                 <!-- card-header-->
                                                 <!-- Card body -->
-                                                <div id="collapsethree3" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                                <div id="collapsethree3" class="collapse" role="tabpanel"
+                                                    aria-labelledby="headingOne1" data-parent="#accordionEx">
                                                     <div class="card-body">
                                                         <div class="row">
                                                             <div class="col-lg-12">
@@ -273,17 +293,21 @@
 
                                                 <!-- Card header -->
                                                 <div class="card-header" role="tab" id="headingOne1">
-                                                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapsefour4" aria-expanded="true" aria-controls="collapsefour">
+                                                    <a data-toggle="collapse" data-parent="#accordionEx"
+                                                        href="#collapsefour4" aria-expanded="true"
+                                                        aria-controls="collapsefour">
                                                         <h5 class="mb-0 row">
                                                             <p class="col-sm-6">Grading scale</p>
-                                                            <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
+                                                            <i
+                                                                class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
 
                                                         </h5>
                                                     </a>
                                                 </div>
                                                 <!-- card-header-->
                                                 <!-- Card body -->
-                                                <div id="collapsefour4" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                                <div id="collapsefour4" class="collapse" role="tabpanel"
+                                                    aria-labelledby="headingOne1" data-parent="#accordionEx">
                                                     <div class="card-body">
                                                         <div class="row">
                                                             <div class="col-lg-12">
@@ -306,17 +330,21 @@
 
                                                 <!-- Card header -->
                                                 <div class="card-header" role="tab" id="headingOne1">
-                                                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapsefive5" aria-expanded="true" aria-controls="collapsefive5">
+                                                    <a data-toggle="collapse" data-parent="#accordionEx"
+                                                        href="#collapsefive5" aria-expanded="true"
+                                                        aria-controls="collapsefive5">
                                                         <h5 class="mb-0 row">
                                                             <p class="col-sm-6">Extra activities provide</p>
-                                                            <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
+                                                            <i
+                                                                class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
 
                                                         </h5>
                                                     </a>
                                                 </div>
                                                 <!-- card-header-->
                                                 <!-- Card body -->
-                                                <div id="collapsefive5" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                                <div id="collapsefive5" class="collapse" role="tabpanel"
+                                                    aria-labelledby="headingOne1" data-parent="#accordionEx">
                                                     <div class="card-body">
                                                         <div class="row">
                                                             <div class="col-lg-12">
@@ -341,17 +369,21 @@
 
                                                 <!-- Card header -->
                                                 <div class="card-header" role="tab" id="headingOne1">
-                                                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapsenine9" aria-expanded="true" aria-controls="collapsenine9">
+                                                    <a data-toggle="collapse" data-parent="#accordionEx"
+                                                        href="#collapsenine9" aria-expanded="true"
+                                                        aria-controls="collapsenine9">
                                                         <h5 class="mb-0 row">
                                                             <p class="col-sm-6">Supplies list </p>
-                                                            <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
+                                                            <i
+                                                                class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
 
                                                         </h5>
                                                     </a>
                                                 </div>
                                                 <!-- card-header-->
                                                 <!-- Card body -->
-                                                <div id="collapsenine9" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                                <div id="collapsenine9" class="collapse" role="tabpanel"
+                                                    aria-labelledby="headingOne1" data-parent="#accordionEx">
                                                     <div class="card-body">
                                                         <div class="row">
                                                             <div class="col-lg-12">
@@ -374,17 +406,21 @@
 
                                                 <!-- Card header -->
                                                 <div class="card-header" role="tab" id="headingOne1">
-                                                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseten10" aria-expanded="true" aria-controls="collapseten10">
+                                                    <a data-toggle="collapse" data-parent="#accordionEx"
+                                                        href="#collapseten10" aria-expanded="true"
+                                                        aria-controls="collapseten10">
                                                         <h5 class="mb-0 row">
                                                             <p class="col-sm-6">Courses that are provide </p>
-                                                            <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
+                                                            <i
+                                                                class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
 
                                                         </h5>
                                                     </a>
                                                 </div>
                                                 <!-- card-header-->
                                                 <!-- Card body -->
-                                                <div id="collapseten10" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                                <div id="collapseten10" class="collapse" role="tabpanel"
+                                                    aria-labelledby="headingOne1" data-parent="#accordionEx">
                                                     <div class="card-body">
                                                         <div class="row">
                                                             <div class="col-lg-12">
@@ -407,22 +443,28 @@
 
                                                 <!-- Card header -->
                                                 <div class="card-header" role="tab" id="headingOne1">
-                                                    <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseeleven11" aria-expanded="true" aria-controls="collapseeleven11">
+                                                    <a data-toggle="collapse" data-parent="#accordionEx"
+                                                        href="#collapseeleven11" aria-expanded="true"
+                                                        aria-controls="collapseeleven11">
                                                         <h5 class="mb-0 row">
-                                                            <p class="col-sm-6">Paper required to make administration </p>
-                                                            <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
+                                                            <p class="col-sm-6">Paper required to make administration
+                                                            </p>
+                                                            <i
+                                                                class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
 
                                                         </h5>
                                                     </a>
                                                 </div>
                                                 <!-- card-header-->
                                                 <!-- Card body -->
-                                                <div id="collapseeleven11" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                                <div id="collapseeleven11" class="collapse" role="tabpanel"
+                                                    aria-labelledby="headingOne1" data-parent="#accordionEx">
                                                     <div class="card-body">
                                                         <div class="row">
                                                             <div class="col-lg-12">
                                                                 <div class="form-group row">
-                                                                    <img src="{{asset($school->contract)}}" class="col-lg-4">
+                                                                    <img src="{{asset($school->contract)}}"
+                                                                        class="col-lg-4">
                                                                     {{-- <img src="assets/img/card3.jpg" class="col-lg-4">
                                                                     <img src="assets/img/card3.jpg" class="col-lg-4">
                                                                     <img src="assets/img/card3.jpg" class="col-lg-4">
@@ -461,9 +503,19 @@
 
 
                 </div>
+                <div class="col-lg-12 form text-center">
+                    <div class="submit">
+
+                        <input type="submit" value="send profile" name="" class="btn">
+
+
+                    </div>
+                </div>
+                <!--col-->
                 <!--row-->
             </div>
             <!--row-->
+
         </div>
         <!--container-->
 
