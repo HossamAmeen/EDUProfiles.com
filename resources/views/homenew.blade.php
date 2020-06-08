@@ -1,435 +1,436 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    @include('newHead')
 
-    <title>EDUProfiles</title>
-    <meta content="" name="descriptison">
-    <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <link href="{{asset('assets/img/favicon.png')}}" rel="icon">
-    <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700"
-        rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/vendor/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
-
-    <!-- =======================================================
-  * Template Name: Rapid - v2.0.0
-  * Template URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
-<body>
 
-    <!-- ======= Header ======= -->
+
+<!-- 
+        start home
+      -->
+
+
+<section class="home">
+
+    <div class="over"></div>
+
     <section class="nav " id="header">
         <div class="container">
-            <div class="logo float-left">
-                <h1 class="text-light"><a class="scrollto" href="#intro"><span>EDU Profiles</span></a></h1>
-            </div>
-            <nav class="main-nav navbar-expand-lg float-right d-none d-lg-block">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container">
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"> <i class="fa fa-chevron-down"></i>
-                    </span>
-                </button>
+                    <a class="navbar-brand" href="#">
+                        <h1> <img src="{{asset('assets2/img/logo.jpg')}}"> <span>EDU Profiles</span></h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fas fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About Us</a>
-
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
-
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#footer">Contact Us</a>
-                        </li>
-
-                    </ul>
-                </div>
-
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#aboutus">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#login">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#School-Profiles">School Profiles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contactus">contact us</a>
+                            </li>
+                        </ul>
+                    </div>
             </nav>
-
-
         </div>
+
+
     </section>
 
 
-    <!-- Vendor JS Files -->
+    <div class="content wow zoomIn text-center ">
+        <div class="container">
+            <p class="lead">Get your admission today from any school do you want</p>
+        </div>
 
-    <!-- ======= Hero Section ======= -->
-    <header class="header" id="#hero">
-        <div class="over">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="content-wrapper">
-                            <h1 class="title">EDU <span> Profiles</span></h1>
-                            <h4>We Are Here For You</h4>
-                            <p>You Will Find All You Need Here</p>
-                            <a class="btn btn-info" href="{{url('about-student')}}">Student</a>
-                            <a class="btn btn-info" href="{{url('about-school')}}">School</a>
+    </div>
+    <div class="owl">
+        <div class="owl-carousel owl-theme ">
+            <img src="{{asset('assets2/img/intro-bg.jpg')}}">
+            <div>
+                <img src="{{asset('assets2/img/index-img/slider.jpeg')}}">
+            </div>
+            <div>
+                <img src="{{asset('assets2/img/intro-bg.jpg')}}">
+            </div>
+            <div>
+                <img src="{{asset('assets2/img/index-img/slider.jpeg')}}">
+            </div>
+        </div>
+    </div>
 
+</section>
+<!-- 
+  end home 
+-->
+<!-- 
+  start icons
+-->
+@if(session('school_id') != null || session('student_id') != null)
+<section class="icons">
+    <div class="container">
+        <div class=" row">
+            <div class="col-sm-4">
+                <div style="margin: auto; text-align: center;">
+                    <div class="icon-one hvr-buzz ">
+                    @if(session('school_id') != null)
+                    <a href="{{url('profile-school/'.session('school_id'))}}">
+                        <img src="{{asset(session('school_photo') ?? 'assets2/images/school2.jpeg')}}" alt="hello"
+                            class="rounded-circle circle2 ">
+                    </a>
+                    @else
+                    <a href="{{url('profile-student/'.session('student_id'))}}">
+                        <img src="{{asset(session('student_photo') ?? 'assets/img/1.png')}}" alt="hello"
+                            class="rounded-circle circle2 ">
+                    </a>
+                    @endif
 
-                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="images">
-                            <img src="{{asset('assets/img/1.png')}}">
-                        </div>
-
+                    <div class="text">
+                        <p>my profile</p>
                     </div>
                 </div>
-
             </div>
+
+
+            <div class="col-sm-4">
+                <a href="{{url('get-notifications')}}" style="color: black">
+                <div style="margin: auto; text-align: center;">
+                    <div class="icon-two hvr-buzz ">
+                        <div class="icon2 text-center">
+                            <div class="in3">
+                                <div class="in4">
+                                    <span class="fas fa-bell fa-3x"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>notification</p>
+                    </div>
+                </div>
+            </a>
+            </div>
+
+
+            <div class="col-sm-4">
+                <a href="{{url('show-schools')}}" style="color: black">
+                <div style="margin: auto; text-align: center;">
+                    <div class="icon-one hvr-buzz ">
+                        <div class="icon1 text-center">
+                            <div class="in1">
+                                <div class="in2">
+                                    <span class="fas fa-school fa-3x"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                   <p>School Profile</p>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end icons-->
+
+
+<div class="content wow zoomIn text-center ">
+    <div class="container">
+        <p class="lead">Get your admission today from any school do you want</p>
+    </div>
+
+</div>
+{{-- <div class="owl">
+    <div class="owl-carousel owl-theme ">
+        <img src="{{asset('assets2/img/intro-bg.jpg')}}">
+        <div>
+            <img src="{{asset('assets2/img/index-img/WhatsApp Image 2020-05-30 at 8.16.22 PM.jpeg')}}">
+        </div>
+        <div>
+            <img src="{{asset('assets2/img/intro-bg.jpg')}}">
+        </div>
+        <div>
+            <img src="{{asset('assets2/img/index-img/WhatsApp Image 2020-05-30 at 8.16.22 PM.jpeg')}}">
+        </div>
+    </div>
+</div> --}}
+
+</section>
+@endif
+<!-- 
+  end home 
+-->
+
+{{-- @if(session('school_id') != null || session('student_id') != null) --}}
+
+
+<!-- 
+  start login
+-->
+
+<section id="login">
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <div class="contain1">
+                <h2>
+                    Register now to get your profile
+                </h2>
+                <br>
+
+                <div class="buttuns">
+                    <a class="form-check-label btn btn-danger"
+                            href="{{url('register-school')}}">Register School</a>
+                            <br><br>
+                    {{-- <span> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</span> --}}
+                    {{-- <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"
+                        checked> --}}
+                    <a class="form-check-label btn btn-danger" href="{{url('register-student')}}" for="gridRadios2">
+                        Register Student
+                    </a>
+                    <br>
+                    <br><br><br>
+                    {{-- <a class="btn btn-danger" href="">Register </a> --}}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="log">
+                <div class="over2"></div>
+                <div class="contain2">
+                    <h1>LOGIN TO YOUR ACCOUNT</h1>
+                    <form action="{{url('login-school')}}" method="POST">
+                        @csrf
+
+                        @if($errors->any())
+                        <div class="alert alert-danger">
+                            <strong>{{$errors->first()}}</strong>
+                        </div>
+
+                        @endif
+                        <input class="input" name="email" value="{{Request::old('email')}}" type="email"
+                            placeholder="email" required>
+                        <input class="input" name="password" type="password" placeholder="password" required>
+                        <button class=" btn btn-warning">login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 
+  end login
+-->
+
+<!--
+  start services
+-->
+
+<section id="Services" class=" services text-center">
+    <div class="container wow fadeInUp">
+        <h4>Services</h4>
+        <div class="row">
+
+            <div class="col-md-6 col-lg-4 ">
+                <div class="contain hvr-grow">
+                    <div class="icon-circule circ1">
+                        <span class="fas fa-compass fa-2x comp"></span>
+                    </div>
+                    <div>
+                        <a href="">
+                            <h6>Student Profile & certificates</h6>
+                        </a>
+                        <p class="lead"> you can find here all you need about Student certificates </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 ">
+                <div class="contain hvr-grow">
+                    <div class="icon-circule circ2">
+                        <span class="fas fa-globe fa-2x globe"></span>
+                    </div>
+                    <div>
+                        <a href="">
+                            <h6>School Profile & reviwes</h6>
+                        </a>
+                        <p class="lead"> you can find here all you need about Student certificates </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 ">
+                <div class="contain hvr-grow">
+                    <div class="icon-circule circ3">
+                        <span class="fas fa-clock fa-2x clock"></span>
+                    </div>
+                    <div>
+                        <a href="">
+                            <h6>Reservation : Buses , uniforms</h6>
+                        </a>
+                        <p class="lead"> you can find here all you need about Student certificates </p>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
-    </header><!-- End Hero -->
-    <main id="main">
+    </div>
+</section>
 
-        <!-- ======= Hero-sm Section ======= -->
-        <header class="header-md" id="#hero">
-            <div class="over">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="content-wrapper">
-                                <h2 class="title">EDU <span>for You</span></h2>
-                                <p>All You Need Here</p>
-                                <a class="btn btn-info" href="{{url('about-student')}}">Student</a>
-                                <a class="btn btn-info" href="{{url('about-school')}}">School</a>
 
+<!--
+  end services
+-->
+
+<!-- ======= school Section ======= -->
+<section class="school pb-5 pt-5" id="School-Profiles">
+    <div class="over">
+        <div class="container w-100">
+
+            <header class="section-header pb-4">
+                <h3>school profiles</h3>
+                <div style="width: 8%; height: 4px; background-color:#ffb606;" class="m-auto"></div>
+            </header>
+            <div class="row sec3">
+                @foreach ($schools as $item)
+                <div class="col-lg-4 ">
+                    <div class="card-wrapper" id="card-school{{$item->id}}">
+                        <div class="img-wrapper">
+                            <img src="{{asset($item->photo ?? 'assets2/images/school2.jpeg')}}"
+                                class="img rounded-circle" />
+                            <div class="icon-wrapper">
+                                <i class="fa fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
-
+                        <div class="info-wrapper">
+                            <h4 class="title">{{$item->name}}</h4>
+                            <p class="content">
+                                {{$item->about}}
+                            </p>
+                            <a href="{{url('profile-school/'.$item->id)}}" class="normal_link">Go to school
+                                profile</a>
+                        </div>
                     </div>
-
                 </div>
-
+                @endforeach
+                <div class="col-lg-12"><a href="{{url('show-schools')}}" class="btn">More</a></div>
             </div>
-        </header><!-- End Hero -->
-        <main id="main">
-
-            <!-- ======= About Section ======= -->
-            <section id="about" class="about text-center">
-
-                <div class="over">
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="about-content">
-                                    <h4>About Us</h4>
-                                    <div class="images">
-                                        <img src="{{asset('assets/img/5.png')}}">
-                                    </div>
-
-                                    <h3>Odio sed id eos et laboriosam consequatur eos earum soluta.</h3>
-                                    <p>We are a platform that make admission for student by transmits the profiles
-                                        including all information
-                                        about them to school and also provide pages about all private school including
-                                        uniform and buses
-                                        Reservation
-
-                                        As most of schools have crowding while admission time With missed some papers in
-                                        their
-                                        documentation although parents don’t know all information about schools because
-                                        Lack of awareness
-                                        according to their main problems showing it in.</p>
-                                    <a class="btn btn-info" href="about.html">Read More</a>
+        </div>
+    </div>
+</section>
+<!-- End school Section -->
 
 
-                                </div>
-                            </div>
 
-                        </div>
-                    </div>
-                    <!--container-->
-                </div>
-
-            </section><!-- End About Section -->
-
-
-            <!-- ======= Services Section ======= -->
-            <section id="services" class="services section-bg">
-                <div class="over">
-                    <div class="container">
-
-                        <header class="section-header">
-                            <h3>Services</h3>
-                        </header>
-
-                        <div class="row">
-
-
-                            <div class="col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
-                                <div class="box">
-                                    <div class="icon" style="background: #eafde7;"><i
-                                            class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
-                                    <h4 class="title"><a href="">Student profile &certificates
-                                        </a></h4>
-                                    <p>you can find here all you need about Student certificates </p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
-                                <div class="box">
-                                    <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline"
-                                            style="color: #2282ff;"></i></div>
-                                    <h4 class="title"><a href="">school profiles &
-                                            reviews </a></h4>
-                                    <p>you can find here all you need about Student certificates </p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
-                                <div class="box">
-                                    <div class="icon" style="background: #ecebff;"><i class="ion-ios-clock-outline"
-                                            style="color: #8660fe;"></i></div>
-                                    <h4 class="title"><a href="">Reservations:Buses,uniforms.</a></h4>
-                                    <p>you can find here all you need about Student certificates </p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </section><!-- End Services Section -->
-            <section id="services" class="services section-bg">
-
-            </section><!-- End Services Section -->
-            <!-- End Services Section -->
-
-
-            <!-- ======= school Section ======= -->
-            <section class="school">
-                <div class="over">
-                    <div class="container">
-
-                        <header class="section-header">
-                            <h3>school profiles</h3>
-                        </header>
-
-                        <div class="row">
-                            @foreach ($schools as $item)
-                            <div class="col-lg-4">
-                                <div class="card-wrapper" style="margin-bottom: 20px;">
-                                    <div class="img-wrapper">
-                                        <img src="{{asset($item->photo ?? 'assets/img/school2.jpeg')}}" class="img" />
-                                        <div class="icon-wrapper">
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                    <div class="info-wrapper">
-                                        <h4 class="title"> {{$item->name}}</h4>
-                                        <p class="content">
-                                          {{$item->about}}
-                                        </p>
-                                    <a href="{{url('profile-school/'.$item->id)}}" class="normal_link">Go to school profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-
-                        <div class="col-lg-12"><a href="{{url('show-schools')}}" class="btn">More</a></div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section><!-- End school Section -->
-
-
-            <!-- ======= Footer ======= -->
-            <footer id="footer" class="section-bg">
-                <div class="footer-top">
-                    <div class="container">
-
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h4 class="text-center">Contact Us</h4>
-                            </div>
-
-
-                            <div class="col-lg-12">
-
-                                <div class="form">
-
-                                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                                        <div class="row">
-                                            <div class="form-group col-sm-6">
-                                                <input type="text" name="name" class="form-control " id="name"
-                                                    placeholder="Your Name" data-rule="minlen:4"
-                                                    data-msg="Please enter at least 4 chars" />
-                                                <div class="validate"></div>
-
-                                            </div>
-                                            <div class="form-group col-sm-6">
-                                                <input type="email" class="form-control" name="email" id="email"
-                                                    placeholder="Your Email" data-rule="email"
-                                                    data-msg="Please enter a valid email" />
-                                                <div class="validate"></div>
-                                            </div>
-
-
-                                        </div>
-                                        <div class="form-group row">
-                                            <input type="text" class="form-control" name="subject" id="subject"
-                                                placeholder="Subject" data-rule="minlen:4"
-                                                data-msg="Please enter at least 8 chars of subject" />
-                                            <div class="validate"></div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <textarea class='form-control col-sm-12' name='' rows='5'
-                                                placeholder='Message'></textarea>
-                                        </div>
-
-
-                                        <div class="mb-3">
-                                            <div class="loading">Loading</div>
-                                            <div class="error-message"></div>
-                                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                                        </div>
-
-                                        <div class="text-center"><button type="submit" title="Send Message">Send
-                                                Message</button></div>
-                                    </form>
-
+<!--start about section-->
+<div class="about-sec" id="aboutus">
+    <div class="layer">
+        <div class="container">
+            <div class="row">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="sec2-home">
+                                <h1>ABOUT US</h1>
+                                <div style="width: 5%; height: 4px; background-color: #ffb606;" class="m-auto">
                                 </div>
 
-                            </div>
+                                <p>We are a platform that make admission for student by transmits 
+                                    the profiles including all information about them to school and also
+                                     provide pages about all private school including uniform and buses 
+                                     Reservation As most of schools have crowding while admission time With 
+                                     missed some papers in their documentation although parents don’t know all 
+                                     information about schools because 
+                                    Lack of awareness according to their main problems showing it in.</p>
 
+
+
+                            </div>
                         </div>
+                        <div class="carousel-item">
+                            <div class="sec2-home">
+                                <h3>ABOUT SCHOOL</h3>
+                                <div style="width: 5%; height: 4px; background-color: #ffb606;" class="m-auto">
+                                </div>
 
-                    </div>
-                </div>
+
+                                <p> About student 
+                                    The steps to get your reservations 
+                                    1- register to your form
+                                    2- login 
+                                    3- Go to your profile to upload your photo and show your details for edit 
+                                    4- go to schools profiles , therefor press bottom send profile to send your profile to school 
+                                    5- go to your notifications and press school decision bottom to know schools decision 
+                                    6- if you are accepted in school please go to its profile and reserve your bus and uniform.</p>
 
 
-            </footer><!-- End  Footer -->
-
-
-            <!--start:: footer-->
-            <section class="footer">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="inline-content text-left">
-                                <h3>About Us</h3>
-                                <p class="content">
-                                    We are a platform that make admission for student by transmits the profiles
-                                    including all information
-                                    about them to school and also provide pages about all private school including
-                                    uniform and buses
-                                    Reservation .
-                                </p>
 
                             </div>
-
                         </div>
-
-                        <div class="col-lg-4">
-                            <div class="inline-content">
-                                <h5>Contact</h5>
-
-                                <p class="content"><i class="fa fa-envelope" aria-hidden="true"></i>
-                                    Supportcenter@info.com</p>
-
-                            </div>
+                        <div class="carousel-item">
+                            <div class="sec2-home">
+                                <h3>ABOUT STUDENT</h3>
+                                <div style="width:5%; height: 4px; background-color: #ffb606;" class="m-auto"></div>
 
 
-                        </div>
+                                <p> School
+                                    1- the school log in or sign
+                                    2-the school recieve notification from student when they send profiles 
+                                    4-school send decision 
+                                    5- school decide accept or reject based on condiations
+                                    6-if student accepted the school send the approvel with the data of interviews and date of test 
+                                    7-the school upload the detalis about buses and uniform reservations.</p>
 
-                        <div class="col-lg-4">
-                            <div class="inline-content">
-                                <h5>Sections</h5>
-                                <ul class="pre-links">
-                                    <li>About</li>
-                                    <li>Services</li>
-                                    <li>Signup/login</li>
-                                    <li>Contact Us</li>
 
-                                </ul>
 
                             </div>
-
                         </div>
                     </div>
-
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    </a>
                 </div>
-
-            </section>
-            <!--end :: footer-->
-
-            <!--start:: copy-->
-            <section class="copy text-center">
-
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg">
-
-                            <div class="inline-content">
-                                <p> &copy; Copyright <strong>Rapid</strong> All right reserved.</p>
-                            </div>
-
-
-                        </div>
-
-
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!--end :: copy-->
-
-            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-
-
-            <script src="{{asset('assets/vendor/jquery/jquery.min.js')}}"></script>
-            <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-            <script src="{{asset('assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
-            <script src="{{asset('assets/vendor/php-email-form/validate.js')}}"></script>
-            <script src="{{asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-            <script src="{{asset('assets/vendor/counterup/counterup.min.js')}}"></script>
-            <script src="{{asset('assets/vendor/venobox/venobox.min.js')}}"></script>
-            <script src="{{asset('assets/vendor/mobile-nav/mobile-nav.js')}}"></script>
-            <script src="{{asset('assets/vendor/wow/wow.min.js')}}"></script>
-            <script src="{{asset('assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
-            <script src="{{asset('assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
-
-            <!-- Template Main JS File -->
-            <script src="{{asset('assets/js/main.js')}}"></script>
-
+            </div>
+        </div>
+    </div>
+</div>
+<!--end about section-->
+@include('newFooter')
 </body>
 
 </html>

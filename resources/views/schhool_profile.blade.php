@@ -1,11 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    @include('head')
+    <title>{{$school->name}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{asset('assets2/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets2/css/all.css')}}" />
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('assets2/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('assets2/css/school_style.css')}}" />
+
 </head>
 
 <body>
+    @include('nav')
+
+
 
     <!--start ::section school-prof-->
     <section class="school-prof">
@@ -13,19 +22,22 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title text-center">
-                        <h1>{{$school->name}} school</h1>
+                        <h1>{{$school->name}}</h1>
                     </div>
+                    @if (session()->get('register') )
+                <div class="alert alert-success" style="text-align: center">
+                    <strong>{{session()->get('register')}}</strong>
+                </div>
+                @endif
                 </div>
                 <!--col-->
-
+                
                 <div class="col-lg-12">
                     <div class="images">
-
-                        {{-- <img src="{{ asset( isset($school->photo) ? $school->photo : 'assets/img/school2.jpeg' )}}
-                        " > --}}
-                        <img src="{{ asset(  $school->photo ?? 'assets/img/school2.jpeg' )}} ">
+                        <img src="{{asset($school->photo ?? 'assets2/images/school2.jpeg')}}">
                     </div>
                 </div>
+
                 <!--col-->
                 <div class="col-lg-5">
                     <div class="content">
@@ -99,9 +111,39 @@
                                                 </div>
 
                                             </div>
-                                            <!--card-->
-
                                             @if(session('school_id') != null)
+                                            <!--card-->
+                                            <div class="row">
+                                                <div class="col-lg-12">
+
+                                                    <div class="icon-wrapper icon-two">
+                                                        <ul class="pre-links">
+                                                            <li>
+                                                                <a href="{{url('add-uniform')}}"
+                                                                    class='btn btn-default btn-outline-warning en'>
+                                                                    <i class="fa fa-user-circle fa-2x"
+                                                                        aria-hidden="true"></i>
+                                                                </a>
+
+                                                                <h5>UNIFORM RESERVATION</h5>
+                                                            </li>
+                                                            <li class="nav-item ">
+                                                                <a href="{{url('add-bus')}}"
+                                                                    class='btn btn-default btn-outline-warning en'>
+                                                                    <i class="fa fa-bus fa-2x " aria-hidden="true"></i>
+                                                                </a>
+                                                                <h5>BUS RESERVATION</h5>
+                                                            </li>
+
+                                                        </ul>
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                           
                                             <a href="{{url('profile-school-edit/'.$id)}}" class="btn btn-info">edit</a>
                                             @endif
                                             <a href="{{url('/')}}" class="btn btn-info">home</a>
@@ -122,8 +164,11 @@
                     <!--content-->
 
                 </div>
+
+               
                 <!--col-->
 
+             
                 <div class="col-lg-7 vertical-line">
 
                     <div class="content">
@@ -460,6 +505,7 @@
                                                 <div id="collapseeleven11" class="collapse" role="tabpanel"
                                                     aria-labelledby="headingOne1" data-parent="#accordionEx">
                                                     <div class="card-body">
+                                                        @if(isset($school->contract))
                                                         <div class="row">
                                                             <div class="col-lg-12">
                                                                 <div class="form-group row">
@@ -475,6 +521,7 @@
                                                             </div>
 
                                                         </div>
+                                                        @endif
                                                         <!--row-->
                                                         <!--row-->
                                                     </div>
@@ -503,34 +550,37 @@
 
 
                 </div>
+                <!--row-->
+                @if(session('school_id') == null)
+                @if(isset($regisered) )
                 <div class="col-lg-12 form text-center">
                     <div class="submit">
-
-                        <input type="submit" value="send profile" name="" class="btn">
-
-
+                        @if($regisered == 1)
+                            <h6 class="last" style="margin: 1% 30%">You have sent your profile</h6>
+                        @else
+                        <a  class="btn last" style="color: black" href="{{url('send-profie/'.$school->id )}}">
+                        send profile</a>
+                        @endif
                     </div>
                 </div>
+                @endif
+                @endif
                 <!--col-->
-                <!--row-->
+               
             </div>
             <!--row-->
-
         </div>
         <!--container-->
 
+
+
     </section>
     <!--end ::section school-prof-->
+@include('newFooter')
 
-
-
-
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-
-
-    @include('foot')
-
+    <script src="{{asset('assets2/js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{asset('assets2/js/popper.min.js')}}"></script>
+    <script src="{{asset('assets2/js/bootstrap.min.js')}}"></script>
 </body>
 
 </html>

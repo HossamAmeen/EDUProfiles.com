@@ -8,16 +8,16 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        \App\Models\User::create([
-            'full_name'=> 'admin',
-            'email' => 'asd@asd.asd',
-            'password' => bcrypt('admin'),
-            'user_name' => "admin",
-            'phone' => "01010079798",
-           'image' => " ",
-            'role' => 1,
+       
+        \App\Student::create([
+           'email' =>'student@gmail.com' ,
+           'password' => bcrypt('student@gmail.com'),
         ]);
-
+        \App\School::create([
+            'email' =>'school@gmail.com' ,
+           'password' => bcrypt('school@gmail.com'),
+          
+        ]);
     
  
 

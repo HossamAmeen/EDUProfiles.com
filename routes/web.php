@@ -18,10 +18,23 @@ Route::get('show-schools', 'HomeController@showSchools');
 Route::any('register-school', 'HomeController@registerSchool');
 Route::any('register-student', 'HomeController@registerStudent');
 
-Route::post('login-school', 'HomeController@LoginSchool');
+Route::any('login-school', 'HomeController@LoginSchool');
 Route::post('login-student', 'HomeController@LoginStudent');
 
+Route::get('send-profie/{school_id}', 'HomeController@registerInSchhool');
 
 
 
+Route::any('add-bus', 'HomeController@addBus');
+Route::any('add-uniform', 'HomeController@addUniform');
 
+
+
+Route::any('register-student-school-status/{student_id}/{status?}', 'HomeController@updateRegisterStudent');
+Route::any('interview/{studentId}', 'HomeController@interview');
+
+
+Route::get('notification', 'HomeController@notification');
+Route::get('get-notifications', 'HomeController@get_notification');
+Route::get('students-registered', 'HomeController@students_registered');
+Route::get('school-respones/{id}', 'HomeController@school_respones');

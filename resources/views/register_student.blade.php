@@ -1202,21 +1202,25 @@
                                     <textarea class='form-control' name='activities' rows='5'
                                         placeholder='list your child hobbies'></textarea>
                                     <input type="file" id="myfile" class="control" name="activities_image"><br>
-
-
-
                             </div>
                             <!--col-->
-
-
                         </div>
                         <!--row-->
-
-
                     </div>
-                    <!--picture-->
+                    <div class="picture last">
+                        <div class="row">
 
+                            <div class="col-lg-12">
 
+                                    <label for="myfile" class="col-sm-12">upload your photo</label>
+                                   
+                                    <input type="file"  class="control" name="photo2"><br>
+                            </div>
+                            <!--col-->
+                        </div>
+                        <!--row-->
+                    </div>
+                   <!--picture-->
                     <div class="submit">
                         <div class="row">
                             <div class="col-lg-12">

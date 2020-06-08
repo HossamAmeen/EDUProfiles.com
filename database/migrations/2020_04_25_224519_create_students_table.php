@@ -85,6 +85,8 @@ class CreateStudentsTable extends Migration
             /////////////////////  passport birth_certificate guardian_passport objection_letter
             $table->string('passport')->nullable();
             $table->string('birth_certificate')->nullable();
+            $table->string('ministry')->nullable();
+            $table->string('statement_enrolment2')->nullable();
             $table->string('guardian_passport')->nullable();
             $table->string('objection_letter')->nullable();
             ///////////////// Enrolment degree entrance
@@ -94,6 +96,7 @@ class CreateStudentsTable extends Migration
             ////////////////////////
             $table->text('activities')->nullable();
             $table->string('activities_image')->nullable();
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }

@@ -14,16 +14,16 @@ class Student extends Model
        'Mobile' ,'City' ,'E_Mail', 'Occupation', 'SSN_f',
     'Firstname_m' ,'Surname_m' ,'Lastname_m', 'Nationality_m', 'Religion_m', 'Mobile_m',
      'City_m', 'E_Mail_m',  'Occupation_m' ,'SSN_m',
-    'silibings_number', 'silibings' ,'medical_information_text' ,'medical_information_image',
+    'silibings_number', 'silibings' ,'medical_information','medical_information_text' ,'medical_information_image',
     'activities' ,'activities_image',
 
         'School', 'Grade' ,'Curriculum' ,'Location',
         'School2', 'Grade2', 'Curriculum2' ,'Location2',
         'School3' ,'Grade3' ,'Curriculum3', 'Location3', 'historical' ,
-        'Statement_enrolment',
-        'Transfer', 'transfers', 'Printout',
+        'Statement_enrolment','ministry',
+        'Transfer', 'transfers', 'Printout','statement_enrolment2',
         'passport', 'birth_certificate', 'guardian_passport' ,'objection_letter',
         'Enrolment', 'degree', 'entrance',
-        'activities', 'activities_image'
+        'activities', 'activities_image' , 'photo'
   ];
 }
