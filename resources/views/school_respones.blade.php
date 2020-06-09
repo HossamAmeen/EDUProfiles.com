@@ -34,8 +34,8 @@
                 <p class="sch-name">{{$item->school->name}}</p>
                 </div>
                 <div class="card-body">
-                    <p class="card-text">Congrats you are accepted with our school please comre to school to complete
-                        another requirement.</p>
+                    <p class="card-text">Congrats you are accepted with our school please come to school to complete
+                        another requirements.</p>
                 </div>
             </div>
             @elseif($item->status == 2)
