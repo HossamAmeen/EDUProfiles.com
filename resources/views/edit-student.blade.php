@@ -1261,8 +1261,8 @@
                                 <textarea class='form-control' name='activities' rows='5'
                                     placeholder='list your child hobbies'>{{$student->activities}}</textarea>
                                 <input type="file" id="myfile" class="control" name="activities_image"><br>
-
-
+                                <label for="myfile" class="col-sm-12"> upload photo </label>
+                                <input type="file" id="myfile" class="control" name="photo_file"><br>
 
                             </div>
                             <!--col-->

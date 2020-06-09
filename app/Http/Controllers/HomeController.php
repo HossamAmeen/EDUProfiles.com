@@ -290,6 +290,7 @@ class HomeController extends Controller
         {
 
             $requestArray['photo'] = $this->storeFile($request->photo_file);
+
         }
 
         if(isset($requestArray['password']) && $requestArray['password'] != ""){
@@ -299,7 +300,7 @@ class HomeController extends Controller
         }
         $school =  School::findOrFail($id);
         $school->update($requestArray) ;
-
+        session(['school_photo' => $school->photo]);
         return  redirect('profile-school/'.$school->id);
     }
 
@@ -326,6 +327,7 @@ class HomeController extends Controller
         }
         $student =  Student::findOrFail($id);
         $student->update($requestArray) ;
+        session(['student_photo' => $student->photo]);
         // return back();
         return  redirect('profile-student/'.$student->id);
     }

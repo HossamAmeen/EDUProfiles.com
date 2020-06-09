@@ -551,19 +551,19 @@
 
                 </div>
                 <!--row-->
-                @if(session('school_id') == null)
-                @if(isset($regisered) )
-                <div class="col-lg-12 form text-center">
-                    <div class="submit">
-                        @if($regisered == 1)
-                            <h6 class="last" style="margin: 1% 30%">You have sent your profile</h6>
-                        @else
-                        <a  class="btn last" style="color: black" href="{{url('send-profie/'.$school->id )}}">
-                        send profile</a>
-                        @endif
+                @if(session('student_id') != null)
+                    @if(isset($regisered) )
+                    <div class="col-lg-12 form text-center">
+                        <div class="submit">
+                            @if($regisered == 1)
+                                <h6 class="last" style="margin: 1% 30%">You have sent your profile</h6>
+                            @else
+                            <a  class="btn last" style="color: black" href="{{url('send-profie/'.$school->id )}}">
+                            send profile</a>
+                            @endif
+                        </div>
                     </div>
-                </div>
-                @endif
+                    @endif
                 @endif
                 <!--col-->
                
