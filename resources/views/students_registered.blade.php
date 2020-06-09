@@ -38,7 +38,7 @@
                             <div class="card-body ">
                                 <div class="card-content text-center ">
                                     <h3 class="text-primary ">{{$item->student->first_name}}</h3>
-                                    <h4><a href="{{url('profile-student/'.$item->id)}}"> ABOUT us </a></h4>
+                                    <h4><a href="{{url('profile-student/'.$item->student->id)}}"> ABOUT us </a></h4>
                                 </div>
                                 <p>welcome</p>
                             </div>
