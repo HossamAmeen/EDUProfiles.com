@@ -38,3 +38,5 @@ Route::get('notification', 'HomeController@notification');
 Route::get('get-notifications', 'HomeController@get_notification');
 Route::get('students-registered', 'HomeController@students_registered');
 Route::get('school-respones/{id}', 'HomeController@school_respones');
+
+Route::get('logout', 'HomeController@logout');

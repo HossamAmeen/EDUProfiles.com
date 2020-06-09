@@ -145,8 +145,11 @@
                                             </div>
                                            
                                             <a href="{{url('profile-school-edit/'.$id)}}" class="btn btn-info">edit</a>
+                                            <a href="{{url('logout')}}" class="btn btn-primary">LOG OUT</a>
                                             @endif
-                                            <a href="{{url('/')}}" class="btn btn-info">home</a>
+                                         
+                                             
+                  
                                         </div>
 
 

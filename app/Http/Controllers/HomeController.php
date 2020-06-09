@@ -205,6 +205,7 @@ class HomeController extends Controller
             if (School::where('email', $request->email)->exists()
             && Hash::check($request->password , $school->password)){
                 session(['school_id' => $school->id]);
+                session(['school_photo' => $school->photo]);
                 return  redirect('profile-school/'.$school->id);
             }
             else{
@@ -212,6 +213,7 @@ class HomeController extends Controller
                 if (Student::where('email', $request->email)->exists()
                 && Hash::check($request->password , $student->password)){
                     session(['student_id' => $student->id]);
+                    session(['student_photo' => $student->photo]);
                     return  redirect('profile-student/'.$student->id);
                 }
             }
@@ -413,5 +415,16 @@ class HomeController extends Controller
             
         }
         return view('interview' , compact('student_id'));
+    }
+
+    public function logout()
+    {
+        session()->forget('student_id');
+            session()->forget('school_id');
+            session()->forget('school_photo');
+            session()->forget('student_photo');
+           
+            return redirect()->route('home');
+            
     }
 }

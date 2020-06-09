@@ -40,9 +40,11 @@
                 <div class="image">
                     <img src="{{asset($student->photo ?? 'assets/img/1.png' )}}">
                 </div>
-                
+               
                 <div class="button">
-
+                    @if(session('student_id')!== null)
+                    <a href="{{url('logout')}}" class="btn btn-primary">LOG OUT</a>
+                    @endif
                     @if(isset($schoolHaveProfile) && $schoolHaveProfile == 1 )
                     <a class="btn btn-success" href="{{url('register-student-school-status/'.$student->id.'/1')}}">accept </a>
                     <a class="btn btn-danger" href="{{url('register-student-school-status/'.$student->id.'/2')}}">reject </a>
