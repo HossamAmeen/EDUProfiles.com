@@ -31,14 +31,17 @@
                     <div class="contain">
                         <div class="card">
                             <div>
-                                <div> <img src="{{asset($item->photo ?? 'assets2/images/school2.jpeg')}}" width="100%" height="70%"> </div>
+                                <div> <img src="{{asset($item->photo ?? 'assets2/images/school2.jpeg')}}" width="100%"
+                                        height="70%"> </div>
 
                             </div>
                             <hr>
                             <div class="card-body ">
                                 <div class="card-content text-center ">
-                                    <h3 class="text-primary ">{{$item->student->first_name}}</h3>
-                                    <h4><a href="{{url('profile-student/'.$item->student->id)}}"> ABOUT us </a></h4>
+                                    <h3 class="text-primary "><a href="{{url('profile-student/'.$item->student->id)}}">
+                                            {{$item->student->first_name}}</a></h3>
+                                    {{-- <h4><a href="{{url('profile-student/'.$item->student->id)}}"> ABOUT us </a>
+                                    </h4> --}}
                                 </div>
                                 <p>welcome</p>
                             </div>

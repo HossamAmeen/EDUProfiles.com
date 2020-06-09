@@ -55,7 +55,7 @@
                     <div class="image">
                         <img src="{{asset($student->photo ?? 'assets/img/1.png' )}}">
                     </div>
-                    @if(isset($schoolHaveProfile)  )
+                    @if(isset($schoolHaveProfile) )
                     <div class="button">
 
                         @if($schoolHaveProfile == 1)
@@ -70,7 +70,7 @@
                         </button>
 
                         <div class="collapse" id="collapseExample">
-                        <form action="{{url('register-student-school-status/1')}}" method="POST"> @csrf
+                            <form action="{{url('register-student-school-status/1')}}" method="POST"> @csrf
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Enter Your comment</label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
@@ -80,7 +80,7 @@
                                 <button type="submit" class="btn btn-light mb-2">sent</button>
                             </form>
                         </div>
-                        <a class="btn btn-light test"  href="{{url('interview')}}">Interview & test </a>
+                        <a class="btn btn-light test" href="{{url('interview')}}">Interview & test </a>
                         {{-- <button type="button" class="btn btn-light test" >Interview & test</button> --}}
 
 

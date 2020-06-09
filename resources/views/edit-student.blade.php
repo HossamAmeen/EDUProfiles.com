@@ -235,42 +235,48 @@
                                                 <div class="col-sm-9 row">
                                                     <div class="form-check col-sm-2">
                                                         <input class="form-check-input" type="radio" name="gridRadios"
-                                                            id="gridRadios1" value="IG" @if($student->gridRadios == 'IG') checked @endif>
+                                                            id="gridRadios1" value="IG" @if($student->gridRadios ==
+                                                        'IG') checked @endif>
                                                         <label class="form-check-label" for="gridRadios1" name="">
                                                             IG
                                                         </label>
                                                     </div>
                                                     <div class="form-check col-sm-2">
                                                         <input class="form-check-input" type="radio" name="gridRadios"
-                                                            id="gridRadios2" value="Amirican" @if($student->gridRadios == 'Amirican') checked @endif>
+                                                            id="gridRadios2" value="Amirican" @if($student->gridRadios
+                                                        == 'Amirican') checked @endif>
                                                         <label class="form-check-label" for="gridRadios2" name="">
                                                             Amirican
                                                         </label>
                                                     </div>
                                                     <div class="form-check col-sm-2">
-                                                        <input class="form-check-input" type="radio" name="gridRadios" @if($student->gridRadios == 'French') checked @endif
-                                                            id="gridRadios3" value="French">
+                                                        <input class="form-check-input" type="radio" name="gridRadios"
+                                                            @if($student->gridRadios == 'French') checked @endif
+                                                        id="gridRadios3" value="French">
                                                         <label class="form-check-label" for="gridRadios3" name="">
                                                             French
                                                         </label>
                                                     </div>
                                                     <div class="form-check col-sm-2">
-                                                        <input class="form-check-input" type="radio" name="gridRadios" @if($student->gridRadios == 'German') checked @endif
-                                                            id="gridRadios3" value="German">
+                                                        <input class="form-check-input" type="radio" name="gridRadios"
+                                                            @if($student->gridRadios == 'German') checked @endif
+                                                        id="gridRadios3" value="German">
                                                         <label class="form-check-label" for="gridRadios3" name="">
                                                             German
                                                         </label>
                                                     </div>
                                                     <div class="form-check col-sm-2">
-                                                        <input class="form-check-input" type="radio" name="gridRadios" @if($student->gridRadios == 'National') checked @endif
-                                                            id="gridRadios3" value="National">
+                                                        <input class="form-check-input" type="radio" name="gridRadios"
+                                                            @if($student->gridRadios == 'National') checked @endif
+                                                        id="gridRadios3" value="National">
                                                         <label class="form-check-label" for="gridRadios3" name="">
                                                             National
                                                         </label>
                                                     </div>
                                                     <div class="form-check col-sm-2">
-                                                        <input class="form-check-input" type="radio" name="gridRadios" @if($student->gridRadios == 'Other') checked @endif
-                                                            id="gridRadios3" value="Other">
+                                                        <input class="form-check-input" type="radio" name="gridRadios"
+                                                            @if($student->gridRadios == 'Other') checked @endif
+                                                        id="gridRadios3" value="Other">
                                                         <label class="form-check-label" for="gridRadios3" name="">
                                                             Other
                                                         </label>
@@ -334,28 +340,32 @@
                                                 <div class="col-sm-6 row">
                                                     <div class="form-check col-sm-3">
                                                         <input class="form-check-input" type="radio" name="Status"
-                                                            id="gridRadios1" value="Married" @if($student->Status == 'Married') checked @endif>
+                                                            id="gridRadios1" value="Married" @if($student->Status ==
+                                                        'Married') checked @endif>
                                                         <label class="form-check-label" for="gridRadios1" name="">
                                                             Married
                                                         </label>
                                                     </div>
                                                     <div class="form-check col-sm-3">
-                                                        <input class="form-check-input" type="radio" name="Status" @if($student->Status == 'Separated') checked @endif
-                                                            id="gridRadios2" value="Separated">
+                                                        <input class="form-check-input" type="radio" name="Status"
+                                                            @if($student->Status == 'Separated') checked @endif
+                                                        id="gridRadios2" value="Separated">
                                                         <label class="form-check-label" for="gridRadios2" name="">
                                                             Separated
                                                         </label>
                                                     </div>
                                                     <div class="form-check col-sm-3">
-                                                        <input class="form-check-input" type="radio" name="Status" @if($student->Status == 'Divorced') checked @endif
-                                                            id="gridRadios3" value="Divorced">
+                                                        <input class="form-check-input" type="radio" name="Status"
+                                                            @if($student->Status == 'Divorced') checked @endif
+                                                        id="gridRadios3" value="Divorced">
                                                         <label class="form-check-label" for="gridRadios3" name="">
                                                             Divorced
                                                         </label>
                                                     </div>
                                                     <div class="form-check col-sm-3">
-                                                        <input class="form-check-input" type="radio" name="Status" @if($student->Status == 'Widow') checked @endif
-                                                            id="gridRadios3" value="Widow">
+                                                        <input class="form-check-input" type="radio" name="Status"
+                                                            @if($student->Status == 'Widow') checked @endif
+                                                        id="gridRadios3" value="Widow">
                                                         <label class="form-check-label" for="gridRadios3" name="">
                                                             Widow(er)
                                                         </label>
@@ -375,23 +385,28 @@
                                                 <div class="col-sm-6 row">
                                                     <div class="form-check col-sm-4">
                                                         <input class="form-check-input" type="radio"
-                                                            name="separate_addresses" id="gridRadios1" value="Father" @if($student->separate_addresses == 'Father') checked @endif
-                                                            >
+                                                            name="separate_addresses" id="gridRadios1" value="Father"
+                                                            @if($student->separate_addresses == 'Father') checked @endif
+                                                        >
                                                         <label class="form-check-label" for="gridRadios1" name="">
                                                             Father
                                                         </label>
                                                     </div>
                                                     <div class="form-check col-sm-4">
                                                         <input class="form-check-input" type="radio"
-                                                            name="separate_addresses" id="gridRadios2" value="Mother" @if($student->separate_addresses == 'Mother') checked @endif>
+                                                            name="separate_addresses" id="gridRadios2" value="Mother"
+                                                            @if($student->separate_addresses == 'Mother') checked
+                                                        @endif>
                                                         <label class="form-check-label" for="gridRadios2" name="">
                                                             Mother
                                                         </label>
                                                     </div>
                                                     <div class="form-check col-sm-4">
                                                         <input class="form-check-input" type="radio"
-                                                            name="separate_addresses" id="gridRadios3" @if($student->separate_addresses == 'Custodian') checked @endif
-                                                            value="Custodian">
+                                                            name="separate_addresses" id="gridRadios3"
+                                                            @if($student->separate_addresses == 'Custodian') checked
+                                                        @endif
+                                                        value="Custodian">
                                                         <label class="form-check-label" for="gridRadios3" name="">
                                                             Legal Custodian
                                                         </label>
