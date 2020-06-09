@@ -879,433 +879,422 @@
                                                                         education psychologist or any other specialist?
                                                                     </label>
                                                                 </div>
-                                                                {{-- </div> --}}
                                                             </div>
-                                                            <div class="col-sm-12">
-                                                                <div class="form-check">
-                                                                    <label class="form-check-label" for="gridCheck1">
-                                                                        - Other medical information:
-                                                                    </label>
-                                                                    <textarea class='form-control'
-                                                                        name='medical_information_text' rows='7'
-                                                                        placeholder='medical information'>{{$student->medical_information_text}}</textarea>
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-lg-12">
-
-                                                                <label for="myfile">Select a Picture of medical
-                                                                    certificate :</label>
-                                                                <input type="file" id="myfile" class="control"
-                                                                    name="medical_information_image"><br>
-
-
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <div class="form-check">
+                                                                <label class="form-check-label" for="gridCheck1">
+                                                                    - Other medical information:
+                                                                </label>
+                                                                <textarea class='form-control'
+                                                                    name='medical_information_text' rows='7'
+                                                                    placeholder='medical information'>{{$student->medical_information_text}}</textarea>
 
                                                             </div>
+                                                        </div>
+
+                                                        <div class="col-lg-12">
+
+                                                            <label for="myfile">Select a Picture of medical
+                                                                certificate :</label>
+                                                            <input type="file" id="myfile" class="control"
+                                                                name="medical_information_image2"><br>
+
 
 
                                                         </div>
-                                                        <!--form-group-->
+
+
                                                     </div>
-                                                    <!--col-->
-
-
+                                                    <!--form-group-->
                                                 </div>
-                                                <!--row-->
-                                            </div>
-                                            <!--body-->
-                                        </div>
+                                                <!--col-->
 
+
+                                            </div>
+                                            <!--row-->
+                                        </div>
+                                        <!--body-->
                                     </div>
-                                    <!-- card-->
-
-                                    <div class="card school picture">
-                                        <!--school-->
-
-                                        <!-- Card header -->
-                                        <div class="card-header" role="tab" id="headingOne1">
-                                            <a data-toggle="collapse" data-parent="#accordionEx" href="#collapsefive5"
-                                                aria-expanded="true" aria-controls="collapsefive5">
-                                                <h5 class="mb-0 row">
-                                                    <p class="col-sm-6">school<span>Most Recent School First<span></p>
-
-                                                    <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
-
-                                                </h5>
-                                            </a>
-                                        </div><!-- card-header-->
-                                        <!-- Card body -->
-                                        <div id="collapsefive5" class="collapse" role="tabpanel"
-                                            aria-labelledby="headingOne1" data-parent="#accordionEx">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-lg-12">
-
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-12">
-                                                                <h6>It is essential to provide your school reports
-                                                                    at least for the previous 2 years (if
-                                                                    applicable)</h6>
-                                                            </div>
-                                                            <div class="form-group col-md-3">
-                                                                <label for="inputEmail4">School</label>
-                                                                <input type="text" class="form-control" id="inputEmail4"
-                                                                    placeholder="School" name="School"
-                                                                    value="{{$student->School}}">
-                                                            </div>
-                                                            <div class="form-group col-md-3">
-                                                                <label for="inputEmail4">Grade/Year</label>
-                                                                <input type="text" class="form-control" id="inputEmail4"
-                                                                    placeholder="Grade/Year" name="Grade"
-                                                                    value="{{$student->Grade}}">
-                                                            </div>
-                                                            <div class="form-group col-md-3">
-                                                                <label for="inputEmail4">Type of Curriculum</label>
-                                                                <input type="text" class="form-control" id="inputEmail4"
-                                                                    placeholder="Type of Curriculum" name="Curriculum"
-                                                                    value="{{$student->Curriculum}}">
-                                                            </div>
-                                                            <div class="form-group col-md-3">
-                                                                <label for="inputEmail4">Location</label>
-                                                                <input type="text" class="form-control" id="inputEmail4"
-                                                                    placeholder="Location" name="Location"
-                                                                    value="{{$student->Location}}">
-                                                            </div>
-
-                                                            <div class="form-group col-md-3">
-                                                                <label for="inputEmail4">School</label>
-                                                                <input type="text" class="form-control" id="inputEmail4"
-                                                                    placeholder="School" name="School2"
-                                                                    value="{{$student->School2}}">
-                                                            </div>
-                                                            <div class="form-group col-md-3">
-                                                                <label for="inputEmail4">Grade/Year</label>
-                                                                <input type="text" class="form-control" id="inputEmail4"
-                                                                    placeholder="Grade/Year" name="Grade2"
-                                                                    value="{{$student->Grade2}}">
-                                                            </div>
-                                                            <div class="form-group col-md-3">
-                                                                <label for="inputEmail4">Type of Curriculum</label>
-                                                                <input type="text" class="form-control" id="inputEmail4"
-                                                                    placeholder="Type of Curriculum" name="Curriculum2"
-                                                                    value="{{$student->Curriculum2}}">
-                                                            </div>
-                                                            <div class="form-group col-md-3">
-                                                                <label for="inputEmail4">Location</label>
-                                                                <input type="text" class="form-control" id="inputEmail4"
-                                                                    placeholder="Location" name="Location2"
-                                                                    value="{{$student->Location2}}">
-                                                            </div>
-
-                                                            <div class="form-group col-md-3">
-                                                                <label for="inputEmail4">School</label>
-                                                                <input type="text" class="form-control" id="inputEmail4"
-                                                                    placeholder="School" name="School3"
-                                                                    value="{{$student->School3}}">
-                                                            </div>
-                                                            <div class="form-group col-md-3">
-                                                                <label for="inputEmail4">Grade/Year</label>
-                                                                <input type="text" class="form-control" id="inputEmail4"
-                                                                    placeholder="Grade/Year" name="Grade3"
-                                                                    value="{{$student->Grade3}}">
-                                                            </div>
-                                                            <div class="form-group col-md-3">
-                                                                <label for="inputEmail4">Type of Curriculum</label>
-                                                                <input type="text" class="form-control" id="inputEmail4"
-                                                                    placeholder="Type of Curriculum" name="Curriculum3"
-                                                                    value="{{$student->Curriculum3}}">
-                                                            </div>
-                                                            <div class="form-group col-md-3">
-                                                                <label for="inputEmail4">Location</label>
-                                                                <input type="text" class="form-control" id="inputEmail4"
-                                                                    placeholder="Location" name="Location3"
-                                                                    value="{{$student->Location3}}">
-                                                            </div>
-                                                        </div>
-                                                        <!--form row-->
-
-                                                    </div>
-                                                    <!--col-->
-
-                                                    <div class="col-lg-12">
-
-                                                        <label for="myfile" class="col-sm-12">1-A historical log
-                                                            from the transferring school stating the grades that the
-                                                            student was enrolled in since joining the school
-                                                            :</label>
-                                                        <input type="file" id="myfile" class="control"
-                                                            name="historical"><br>
-                                                        {{--   --}}
-
-
-                                                    </div>
-                                                    <!--col-->
-                                                    <div class="col-lg-12">
-
-                                                        <label for="myfile" class="col-sm-12">2- Statement of
-                                                            enrolment or statement of success sealed by the
-                                                            educational administration:</label>
-                                                        <input type="file" id="myfile" class="control"
-                                                            name="Statement_enrolment"><br>
-                                                        {{--   --}}
-
-
-                                                    </div>
-                                                    <!--col-->
-                                                    <div class="col-lg-12">
-
-                                                        <label for="myfile" class="col-sm-12">3- Transfer request
-                                                            form sealed from the transferring school and the
-                                                            educational
-                                                            department affiliating this school to "New school name
-                                                            ":</label>
-                                                        <input type="file" id="myfile" class="control"
-                                                            name="Transfer"><br>
-                                                        {{--   --}}
-
-
-                                                    </div>
-                                                    <!--col-->
-                                                    <div class="col-lg-12">
-
-                                                        <label for="myfile" class="col-sm-12">4- For transfers from
-                                                            another governorate, all above documents must
-                                                            be sealed from the governorate’s central educational
-                                                            department as well as the new central educational
-                                                            department :</label>
-                                                        <input type="file" id="myfile" class="control"
-                                                            name="transfers"><br>
-                                                        {{--   --}}
-
-
-                                                    </div>
-                                                    <!--col-->
-                                                    <div class="col-lg-12">
-
-                                                        <label for="myfile" class="col-sm-12">5- Printout of the
-                                                            electronic transfer document sealed by the transferring
-                                                            school :</label>
-                                                        <input type="file" id="myfile" class="control"
-                                                            name="Printout"><br>
-                                                        {{--   --}}
-
-
-                                                    </div>
-                                                    <!--col-->
-
-
-                                                </div>
-                                                <!--row-->
-                                            </div>
-                                            <!--body-->
-                                        </div>
-
-                                    </div><!-- card-->
-
-                                    <div class="card picture">
-                                        <!--transfers international documents Additional-->
-
-                                        <!-- Card header -->
-                                        <div class="card-header" role="tab" id="headingOne1">
-                                            <a data-toggle="collapse" data-parent="#accordionEx" href="#collapsesix6"
-                                                aria-expanded="true" aria-controls="collapsesix6">
-                                                <h5 class="mb-0 row">
-                                                    <p class="col-sm-6 text">transfers international documents
-                                                        Additional</p>
-                                                    <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
-
-                                                </h5>
-                                            </a>
-                                        </div><!-- card-header-->
-                                        <!-- Card body -->
-                                        <div id="collapsesix6" class="collapse" role="tabpanel"
-                                            aria-labelledby="headingOne1" data-parent="#accordionEx">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-lg-12">
-
-                                                        <label for="myfile" class="col-sm-12">1- Enrolment and
-                                                            success certificate translated into Arabic stamped by
-                                                            the transferring school and attested by the Ministry of
-                                                            Education in
-                                                            the transferring country as well as the embassy of this
-                                                            country in Egypt and the Egyptian Ministry of Foreign
-                                                            Affairs.:</label>
-                                                        <input type="file" id="myfile" class="control"
-                                                            name="Enrolment"><br>
-
-
-
-                                                    </div>
-                                                    <!--col-->
-                                                    <div class="col-lg-12">
-
-                                                        <label for="myfile" class="col-sm-12">2- Latest degree
-                                                            attained translated into Arabic stamped by the
-                                                            transferring school and attested by the Ministry of
-                                                            Education in
-                                                            the transferring country as well as the embassy of this
-                                                            country in Egypt and the Egyptian Ministry of Foreign
-                                                            Affairs:</label>
-                                                        <input type="file" id="myfile" class="control"
-                                                            name="degree"><br>
-
-
-
-                                                    </div>
-                                                    <!--col-->
-                                                    <div class="col-lg-12">
-
-                                                        <label for="myfile" class="col-sm-12">3- Egyptians only:
-                                                            Joining request from Kerdasa educational department for
-                                                            Egyptian students returning from abroad as well as copy
-                                                            of the passport with the entrance stamp to
-                                                            Egypt:</label>
-                                                        <input type="file" id="myfile" class="control"
-                                                            name="entrance"><br>
-
-
-
-                                                    </div>
-                                                    <!--col-->
-
-
-                                                </div>
-                                                <!--row-->
-                                            </div>
-                                            <!--body-->
-                                        </div>
-
-                                    </div><!-- card-->
-
-
-                                    <div class="card picture">
-                                        <!--transfers international documents Additional-->
-
-                                        <!-- Card header -->
-                                        <div class="card-header" role="tab" id="headingOne1">
-                                            <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseseven7"
-                                                aria-expanded="true" aria-controls="collapseseven7">
-                                                <h5 class="mb-0 row">
-                                                    <p class="col-sm-6 text">students Egyptian-non all from required
-                                                        Document</p>
-                                                    <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
-
-                                                </h5>
-                                            </a>
-                                        </div><!-- card-header-->
-                                        <!-- Card body -->
-                                        <div id="collapseseven7" class="collapse" role="tabpanel"
-                                            aria-labelledby="headingOne1" data-parent="#accordionEx">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-lg-12">
-
-                                                        <label for="myfile" class="col-sm-12">1- Copy of the
-                                                            student’s passport with the non-touristic residency visa
-                                                            and the entrance stamp :</label>
-                                                        <input type="file" id="myfile" class="control"
-                                                            name="passport"><br>
-                                                        {{--   --}}
-
-
-                                                    </div>
-                                                    <!--col-->
-                                                    <div class="col-lg-12">
-
-                                                        <label for="myfile" class="col-sm-12">2- Legal Arabic
-                                                            translation of the birth certificate attested by the
-                                                            Egyptian Ministry of Foreign Affairs:</label>
-                                                        <input type="file" id="myfile" class="control" name=""><br>
-
-
-
-                                                    </div>
-                                                    <!--col-->
-                                                    <div class="col-lg-12">
-
-                                                        <label for="myfile" class="col-sm-12">3- Copy of the
-                                                            guardian’s passport with the non-touristic residency
-                                                            visa and the entrance stamp :</label>
-                                                        <input type="file" id="myfile" class="control"
-                                                            name="guardian_passport"><br>
-                                                        {{--   --}}
-
-
-                                                    </div>
-                                                    <!--col-->
-                                                    <div class="col-lg-12">
-
-                                                        <label for="myfile" class="col-sm-12">4- No objection letter
-                                                            to study at the school from the embassy of the student’s
-                                                            country in Egypt :</label>
-                                                        <input type="file" id="myfile" class="control"
-                                                            name="objection_letter"><br>
-                                                        {{--   --}}
-
-
-                                                    </div>
-                                                    <!--col-->
-
-
-                                                </div>
-                                                <!--row-->
-                                            </div>
-                                            <!--body-->
-                                        </div>
-
-                                    </div><!-- card-->
-
 
                                 </div>
-                            </div><!-- col-->
-                        </div><!-- up row-->
+                                <!-- card-->
+
+                                <div class="card school picture">
+                                    <!--school-->
+
+                                    <!-- Card header -->
+                                    <div class="card-header" role="tab" id="headingOne1">
+                                        <a data-toggle="collapse" data-parent="#accordionEx" href="#collapsefive5"
+                                            aria-expanded="true" aria-controls="collapsefive5">
+                                            <h5 class="mb-0 row">
+                                                <p class="col-sm-6">school<span>Most Recent School First<span></p>
+
+                                                <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
+
+                                            </h5>
+                                        </a>
+                                    </div><!-- card-header-->
+                                    <!-- Card body -->
+                                    <div id="collapsefive5" class="collapse" role="tabpanel"
+                                        aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-12">
+                                                            <h6>It is essential to provide your school reports
+                                                                at least for the previous 2 years (if
+                                                                applicable)</h6>
+                                                        </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for="inputEmail4">School</label>
+                                                            <input type="text" class="form-control" id="inputEmail4"
+                                                                placeholder="School" name="School"
+                                                                value="{{$student->School}}">
+                                                        </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for="inputEmail4">Grade/Year</label>
+                                                            <input type="text" class="form-control" id="inputEmail4"
+                                                                placeholder="Grade/Year" name="Grade"
+                                                                value="{{$student->Grade}}">
+                                                        </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for="inputEmail4">Type of Curriculum</label>
+                                                            <input type="text" class="form-control" id="inputEmail4"
+                                                                placeholder="Type of Curriculum" name="Curriculum"
+                                                                value="{{$student->Curriculum}}">
+                                                        </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for="inputEmail4">Location</label>
+                                                            <input type="text" class="form-control" id="inputEmail4"
+                                                                placeholder="Location" name="Location"
+                                                                value="{{$student->Location}}">
+                                                        </div>
+
+                                                        <div class="form-group col-md-3">
+                                                            <label for="inputEmail4">School</label>
+                                                            <input type="text" class="form-control" id="inputEmail4"
+                                                                placeholder="School" name="School2"
+                                                                value="{{$student->School2}}">
+                                                        </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for="inputEmail4">Grade/Year</label>
+                                                            <input type="text" class="form-control" id="inputEmail4"
+                                                                placeholder="Grade/Year" name="Grade2"
+                                                                value="{{$student->Grade2}}">
+                                                        </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for="inputEmail4">Type of Curriculum</label>
+                                                            <input type="text" class="form-control" id="inputEmail4"
+                                                                placeholder="Type of Curriculum" name="Curriculum2"
+                                                                value="{{$student->Curriculum2}}">
+                                                        </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for="inputEmail4">Location</label>
+                                                            <input type="text" class="form-control" id="inputEmail4"
+                                                                placeholder="Location" name="Location2"
+                                                                value="{{$student->Location2}}">
+                                                        </div>
+
+                                                        <div class="form-group col-md-3">
+                                                            <label for="inputEmail4">School</label>
+                                                            <input type="text" class="form-control" id="inputEmail4"
+                                                                placeholder="School" name="School3"
+                                                                value="{{$student->School3}}">
+                                                        </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for="inputEmail4">Grade/Year</label>
+                                                            <input type="text" class="form-control" id="inputEmail4"
+                                                                placeholder="Grade/Year" name="Grade3"
+                                                                value="{{$student->Grade3}}">
+                                                        </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for="inputEmail4">Type of Curriculum</label>
+                                                            <input type="text" class="form-control" id="inputEmail4"
+                                                                placeholder="Type of Curriculum" name="Curriculum3"
+                                                                value="{{$student->Curriculum3}}">
+                                                        </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for="inputEmail4">Location</label>
+                                                            <input type="text" class="form-control" id="inputEmail4"
+                                                                placeholder="Location" name="Location3"
+                                                                value="{{$student->Location3}}">
+                                                        </div>
+                                                    </div>
+                                                    <!--form row-->
+
+                                                </div>
+                                                <!--col-->
+
+                                                <div class="col-lg-12">
+
+                                                    <label for="myfile" class="col-sm-12">1-A historical log
+                                                        from the transferring school stating the grades that the
+                                                        student was enrolled in since joining the school
+                                                        :</label>
+                                                    <input type="file" id="myfile" class="control"
+                                                        name="historical"><br>
+                                                    {{--   --}}
 
 
-                    </div><!-- father-->
+                                                </div>
+                                                <!--col-->
+                                                <div class="col-lg-12">
 
-                    <div class="picture last">
-                        <div class="row">
+                                                    <label for="myfile" class="col-sm-12">2- Statement of
+                                                        enrolment or statement of success sealed by the
+                                                        educational administration:</label>
+                                                    <input type="file" id="myfile" class="control"
+                                                        name="Statement_enrolment"><br>
+                                                    {{--   --}}
 
-                            <div class="col-lg-12">
 
-                                <label for="myfile" class="col-sm-12">Does your child have any extracurricular
-                                    activities or hobbies and please list them with a copy of the certificate if
-                                    present</label>
-                                <textarea class='form-control' name='activities' rows='5'
-                                    placeholder='list your child hobbies'>{{$student->activities}}</textarea>
-                                <input type="file" id="myfile" class="control" name="activities_image"><br>
-                                <label for="myfile" class="col-sm-12"> upload photo </label>
-                                <input type="file" id="myfile" class="control" name="photo_file"><br>
+                                                </div>
+                                                <!--col-->
+                                                <div class="col-lg-12">
 
+                                                    <label for="myfile" class="col-sm-12">3- Transfer request
+                                                        form sealed from the transferring school and the
+                                                        educational
+                                                        department affiliating this school to "New school name
+                                                        ":</label>
+                                                    <input type="file" id="myfile" class="control" name="Transfer"><br>
+                                                    {{--   --}}
+
+
+                                                </div>
+                                                <!--col-->
+                                                <div class="col-lg-12">
+
+                                                    <label for="myfile" class="col-sm-12">4- For transfers from
+                                                        another governorate, all above documents must
+                                                        be sealed from the governorate’s central educational
+                                                        department as well as the new central educational
+                                                        department :</label>
+                                                    <input type="file" id="myfile" class="control" name="transfers"><br>
+                                                    {{--   --}}
+
+
+                                                </div>
+                                                <!--col-->
+                                                <div class="col-lg-12">
+
+                                                    <label for="myfile" class="col-sm-12">5- Printout of the
+                                                        electronic transfer document sealed by the transferring
+                                                        school :</label>
+                                                    <input type="file" id="myfile" class="control" name="Printout"><br>
+                                                    {{--   --}}
+
+
+                                                </div>
+                                                <!--col-->
+
+
+                                            </div>
+                                            <!--row-->
+                                        </div>
+                                        <!--body-->
+                                    </div>
+
+                                </div><!-- card-->
+
+                                <div class="card picture">
+                                    <!--transfers international documents Additional-->
+
+                                    <!-- Card header -->
+                                    <div class="card-header" role="tab" id="headingOne1">
+                                        <a data-toggle="collapse" data-parent="#accordionEx" href="#collapsesix6"
+                                            aria-expanded="true" aria-controls="collapsesix6">
+                                            <h5 class="mb-0 row">
+                                                <p class="col-sm-6 text">transfers international documents
+                                                    Additional</p>
+                                                <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
+
+                                            </h5>
+                                        </a>
+                                    </div><!-- card-header-->
+                                    <!-- Card body -->
+                                    <div id="collapsesix6" class="collapse" role="tabpanel"
+                                        aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+
+                                                    <label for="myfile" class="col-sm-12">1- Enrolment and
+                                                        success certificate translated into Arabic stamped by
+                                                        the transferring school and attested by the Ministry of
+                                                        Education in
+                                                        the transferring country as well as the embassy of this
+                                                        country in Egypt and the Egyptian Ministry of Foreign
+                                                        Affairs.:</label>
+                                                    <input type="file" id="myfile" class="control" name="Enrolments"><br>
+
+
+
+                                                </div>
+                                                <!--col-->
+                                                <div class="col-lg-12">
+
+                                                    <label for="myfile" class="col-sm-12">2- Latest degree
+                                                        attained translated into Arabic stamped by the
+                                                        transferring school and attested by the Ministry of
+                                                        Education in
+                                                        the transferring country as well as the embassy of this
+                                                        country in Egypt and the Egyptian Ministry of Foreign
+                                                        Affairs:</label>
+                                                    <input type="file" id="myfile" class="control" name="degrees"><br>
+
+
+
+                                                </div>
+                                                <!--col-->
+                                                <div class="col-lg-12">
+
+                                                    <label for="myfile" class="col-sm-12">3- Egyptians only:
+                                                        Joining request from Kerdasa educational department for
+                                                        Egyptian students returning from abroad as well as copy
+                                                        of the passport with the entrance stamp to
+                                                        Egypt:</label>
+                                                    <input type="file" id="myfile" class="control" name="entrances"><br>
+
+
+
+                                                </div>
+                                                <!--col-->
+
+
+                                            </div>
+                                            <!--row-->
+                                        </div>
+                                        <!--body-->
+                                    </div>
+
+                                </div><!-- card-->
+
+
+                                <div class="card picture">
+                                    <!--transfers international documents Additional-->
+
+                                    <!-- Card header -->
+                                    <div class="card-header" role="tab" id="headingOne1">
+                                        <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseseven7"
+                                            aria-expanded="true" aria-controls="collapseseven7">
+                                            <h5 class="mb-0 row">
+                                                <p class="col-sm-6 text">students Egyptian-non all from required
+                                                    Document</p>
+                                                <i class="fa fa-angle-down rotate-icon col-sm-6 text-right"></i>
+
+                                            </h5>
+                                        </a>
+                                    </div><!-- card-header-->
+                                    <!-- Card body -->
+                                    <div id="collapseseven7" class="collapse" role="tabpanel"
+                                        aria-labelledby="headingOne1" data-parent="#accordionEx">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+
+                                                    <label for="myfile" class="col-sm-12">1- Copy of the
+                                                        student’s passport with the non-touristic residency visa
+                                                        and the entrance stamp :</label>
+                                                    <input type="file" id="myfile" class="control" name="passports"><br>
+                                                    {{--   --}}
+
+
+                                                </div>
+                                                <!--col-->
+                                                <div class="col-lg-12">
+
+                                                    <label for="myfile" class="col-sm-12">2- Legal Arabic
+                                                        translation of the birth certificate attested by the
+                                                        Egyptian Ministry of Foreign Affairs:</label>
+                                                    <input type="file" id="myfile" class="control" name="birth_certificates"><br>
+
+
+
+                                                </div>
+                                                <!--col-->
+                                                <div class="col-lg-12">
+
+                                                    <label for="myfile" class="col-sm-12">3- Copy of the
+                                                        guardian’s passport with the non-touristic residency
+                                                        visa and the entrance stamp :</label>
+                                                    <input type="file" id="myfile" class="control"
+                                                        name="guardian_passports"><br>
+                                                    {{--   --}}
+
+
+                                                </div>
+                                                <!--col-->
+                                                <div class="col-lg-12">
+
+                                                    <label for="myfile" class="col-sm-12">4- No objection letter
+                                                        to study at the school from the embassy of the student’s
+                                                        country in Egypt :</label>
+                                                    <input type="file" id="myfile" class="control"
+                                                        name="objection_letters"><br>
+                                                    {{--   --}}
+
+
+                                                </div>
+                                                <!--col-->
+
+
+                                            </div>
+                                            <!--row-->
+                                        </div>
+                                        <!--body-->
+                                    </div>
+
+                                </div><!-- card-->
                             </div>
-                            <!--col-->
+                        </div><!-- col-->
+                    </div><!-- up row-->
+            </div><!-- father-->
 
+            <div class="picture last">
+                <div class="row">
 
-                        </div>
-                        <!--row-->
+                    <div class="col-lg-12">
 
+                        <label for="myfile" class="col-sm-12">Does your child have any extracurricular
+                            activities or hobbies and please list them with a copy of the certificate if
+                            present</label>
+                        <textarea class='form-control' name='activities' rows='5'
+                            placeholder='list your child hobbies'>{{$student->activities}}</textarea>
+                        <input type="file" id="myfile" class="control" name="activities_images"><br>
+                        <label for="myfile" class="col-sm-12"> upload photo </label>
+                        <input type="file" id="myfile" class="control" name="photo_file"><br>
 
                     </div>
-                    <!--picture-->
+                    <!--col-->
 
 
-                    <div class="submit">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <input type="submit" value="Submit" name="" class="btn">
+                </div>
+                <!--row-->
 
-                            </div>
-                            <!--col-->
-                        </div>
-                        <!--row-->
+
+            </div>
+            <!--picture-->
+
+
+            <div class="submit">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <input type="submit" value="Submit" name="" class="btn">
+
                     </div>
-                    <!--submit-->
+                    <!--col-->
+                </div>
+                <!--row-->
+            </div>
+            <!--submit-->
 
-                </form>
+            </form>
 
-            </div><!-- content-->
+        </div><!-- content-->
 
         </div><!-- container-->
 

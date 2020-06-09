@@ -114,183 +114,390 @@
                                 <h5>place of birth:</h5>
                                 <h4>{{$student->place}}</h4>
                             </div>
-                            {{-- <div class="content">
-                                <h5>Grade:</h5>
-                                <h4>{{$student->place}}</h4>
-                        </div>
-                        <div class="content">
-                            <h5>Homeroorn:</h5>
-                            <h4>Green Team</h4>
-                        </div> --}}
-                        <div class="content">
-                            <h5>Birth Date:</h5>
-                            <h4>{{$student->birth_date}}</h4>
-                        </div>
 
 
-                    </div>
-                    <!--col-->
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <h5>Gender:</h5>
-                            <h4>{{$student->gender}}</h4>
-
-                        </div>
-                        <div class="content">
-                            <h5>Adress:</h5>
-                            <h4>{{$student->address}}</h4>
-
-                        </div>
-                        <div class="content">
-                            <h5>Nationality :</h5>
-                            <h4>{{$student->nationality}}</h4>
-
-                        </div>
-                        <div class="content">
-                            <h5>Religion:</h5>
-                            <h4>{{$student->religion}}</h4>
-
-                        </div>
-                        {{-- <div class="content">
-                                <h5>Phone:</h5>
+                            <div class="content">
+                                <h5>Birth Date:</h5>
                                 <h4>{{$student->birth_date}}</h4>
+                            </div>
 
-                    </div> --}}
+
+                        </div>
+                        <!--col-->
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>Gender:</h5>
+                                <h4>{{$student->gender}}</h4>
+
+                            </div>
+                            <div class="content">
+                                <h5>Adress:</h5>
+                                <h4>{{$student->address}}</h4>
+
+                            </div>
+                            <div class="content">
+                                <h5>Nationality :</h5>
+                                <h4>{{$student->nationality}}</h4>
+
+                            </div>
+                            <div class="content">
+                                <h5>Religion:</h5>
+                                <h4>{{$student->religion}}</h4>
+
+                            </div>
+
+
+                        </div>
+                        <!--col-->
+                    </div>
+                    <!--row-->
 
                 </div>
-                <!--col-->
+                <!--content-->
             </div>
-            <!--row-->
 
         </div>
-        <!--content-->
-    </div>
-
-    </div>
-    <!--row-->
+        <!--row-->
 
 
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="parent text-left">
-                <h3>PARENTS</h3>
-                <hr>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="parent text-left">
+                    <h3>PARENTS</h3>
+                    <hr>
 
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="father">
-                <h3>My Father</h3>
-            </div>
-        </div>
-        <div class="col-lg-9">
-            <div class="content">
-                <div class="row">
-
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <h5>Name:</h5>
-                            <h4>{{$student->Firstname}}</h4>
-
-                        </div>
-                        <div class="content">
-                            <h5>Email:</h5>
-                            <h4>{{$student->E_Mail}}</h4>
-
-                        </div>
-                        <div class="content">
-                            <h5>Phone:</h5>
-                            <h4>{{$student->Mobile}}</h4>
-
-                        </div>
-
-                    </div>
-                    <!--col-->
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <h5>Adress:</h5>
-                            <h4>{{$student->City}}</h4>
-
-                        </div>
-                        <div class="content">
-                            <h5>Nationality:</h5>
-                            <h4>{{$student->Nationality_f}}</h4>
-
-                        </div>
-
-
-                    </div>
-                    <!--col-->
                 </div>
-                <!--row-->
-
             </div>
-            <!--content-->
-        </div>
-
-    </div>
-    <!--row-->
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="parent text-left">
-                <hr>
-
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="father">
-                <h3>My Mother</h3>
-            </div>
-        </div>
-        <div class="col-lg-9">
-            <div class="content">
-                <div class="row">
-
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <h5>Name:</h5>
-                            <h4>{{$student->Firstname_m}}</h4>
-
-                        </div>
-                        <div class="content">
-                            <h5>Email:</h5>
-                            <h4>{{$student->E_Mail_m}}</h4>
-
-                        </div>
-                        <div class="content">
-                            <h5>Phone:</h5>
-                            <h4>{{$student->Mobile_m}}</h4>
-
-                        </div>
-
-                    </div>
-                    <!--col-->
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <h5>Adress:</h5>
-                            <h4>{{$student->City_m}}</h4>
-
-                        </div>
-                        <div class="content">
-                            <h5>Nationality:</h5>
-                            <h4>{{$student->Nationality_m}}</h4>
-
-                        </div>
-
-
-
-                    </div>
-                    <!--col-->
+            <div class="col-lg-3">
+                <div class="father">
+                    <h3>My Father</h3>
                 </div>
-                <!--row-->
-
             </div>
-            <!--content-->
+            <div class="col-lg-9">
+                <div class="content">
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>Name:</h5>
+                                <h4>{{$student->Firstname}}</h4>
+
+                            </div>
+                            <div class="content">
+                                <h5>Email:</h5>
+                                <h4>{{$student->E_Mail}}</h4>
+
+                            </div>
+                            <div class="content">
+                                <h5>Phone:</h5>
+                                <h4>{{$student->Mobile}}</h4>
+
+                            </div>
+
+                        </div>
+                        <!--col-->
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>Adress:</h5>
+                                <h4>{{$student->City}}</h4>
+
+                            </div>
+                            <div class="content">
+                                <h5>Nationality:</h5>
+                                <h4>{{$student->Nationality_f}}</h4>
+
+                            </div>
+
+
+                        </div>
+                        <!--col-->
+                    </div>
+                    <!--row-->
+
+                </div>
+                <!--content-->
+            </div>
+
+        </div>
+        <!--row-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="parent text-left">
+                    <hr>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="father">
+                    <h3>My Mother</h3>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="content">
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>Name:</h5>
+                                <h4>{{$student->Firstname_m}}</h4>
+
+                            </div>
+                            <div class="content">
+                                <h5>Email:</h5>
+                                <h4>{{$student->E_Mail_m}}</h4>
+
+                            </div>
+                            <div class="content">
+                                <h5>Phone:</h5>
+                                <h4>{{$student->Mobile_m}}</h4>
+
+                            </div>
+
+                        </div>
+                        <!--col-->
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>Adress:</h5>
+                                <h4>{{$student->City_m}}</h4>
+
+                            </div>
+                            <div class="content">
+                                <h5>Nationality:</h5>
+                                <h4>{{$student->Nationality_m}}</h4>
+
+                            </div>
+
+
+
+                        </div>
+                        <!--col-->
+                    </div>
+                    <!--row-->
+
+                </div>
+                <!--content-->
+            </div>
+
+        </div>
+        <!--row-->
+        {{-- silibings --}}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="parent text-left">
+                    <hr>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="father">
+                    <h3>silibings</h3>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="content">
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>Number of silibings:</h5>
+                                <h4>{{$student->silibings_number}}</h4>
+                                <h6>{{$student->silibings}}</h6>
+                            </div>
+                            
+
+                        </div>
+                      
+                    </div>
+                    <!--row-->
+
+                </div>
+                <!--content-->
+            </div>
+
+        </div>
+        {{-- medical --}}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="parent text-left">
+                    <hr>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="father">
+                    <h3>medical</h3>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="content">
+                    <div class="row">
+
+                       
+                                                
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>medical information:</h5>
+                                <h4>{{$student->medical_information}}</h4>
+                               
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5> - Other medical information:</h5>
+                               
+                                <h6>{{$student->medical_information_text}}</h6>
+                            </div>
+                            
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5> </h5>
+                                <img src="{{asset($student->medical_information_image)}}" height="80" width="80">
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                    <!--row-->
+
+                </div>
+                <!--content-->
+            </div>
+
+        </div>
+        {{-- international documents  Additional --}}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="parent text-left">
+                    <hr>
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="father">
+                    <h3>international documents Additional</h3>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="content">
+                    <div class="row">
+
+                       
+                                                
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>Enrolment and success certificate</h5>
+                                <img src="{{asset($student->Enrolment)}}" height="80" width="80">
+                               
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>Latest degree
+                                    attained translated into Arabic</h5>
+                                <img src="{{asset($student->degree)}}" height="80" width="80">
+                               
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>entrance stamp</h5>
+                                <img src="{{asset($student->entrance)}}" height="80" width="80">
+                               
+                            </div>
+                            
+                            
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>passport</h5>
+                                <img src="{{asset($student->passport)}}" height="80" width="80">
+                               
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>guardian passport</h5>
+                                <img src="{{asset($student->guardian_passport)}}" height="80" width="80">
+                               
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>objection letter</h5>
+                                <img src="{{asset($student->objection_letter)}}" height="80" width="80">
+                               
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>birth certificate</h5>
+                                <img src="{{asset($student->birth_certificate)}}" height="80" width="80">
+                               
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <!--row-->
+
+                </div>
+                <!--content-->
+            </div>
+
         </div>
 
-    </div>
-    <!--row-->
+        {{-- acitivty  --}}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="parent text-left">
+                    <hr>
 
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="father">
+                    <h3>activities image</h3>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="content">
+                    <div class="row">
+
+                       
+                                                
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>{{$student->activities}}</h5>
+                                <img src="{{asset($student->Enrolment)}}" height="80" width="80">
+                               
+                            </div>
+                            
+                            
+                        </div>
+                       
+                    </div>
+                    <!--row-->
+
+                </div>
+                <!--content-->
+            </div>
+
+        </div>
     </div>
 </section>
 <!--end :: srction profile-->

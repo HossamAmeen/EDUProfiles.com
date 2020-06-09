@@ -841,7 +841,7 @@
                                                                     <label for="myfile">Select a Picture of medical
                                                                         certificate :</label>
                                                                     <input type="file" id="myfile" class="control"
-                                                                        name="medical_information_images"><br>
+                                                                        name="medical_information_images2"><br>
 
 
 

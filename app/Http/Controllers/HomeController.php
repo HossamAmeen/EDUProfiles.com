@@ -108,9 +108,9 @@ class HomeController extends Controller
                 $request['photo'] = $this->storeFile($request->photo2); 
             }
                 
-            if(isset($request->medical_information_images))
+            if(isset($request->medical_information_images2))
             {
-                $request['medical_information_image'] = $this->storeFile($request->medical_information_images);
+                $request['medical_information_image'] = $this->storeFile($request->medical_information_images2);
             }
 
             if(isset($request->historicals))
@@ -253,7 +253,7 @@ class HomeController extends Controller
         $regisered = 0 ;
         if(session('student_id') != null){
             
-            $student = StudentSchool::where('student_id', session('student_id'))->first();
+            $student = StudentSchool::where('student_id', session('student_id'))->where('school_id' , $id)->first();
             if($student){
               $regisered = 1;
                 
@@ -314,14 +314,90 @@ class HomeController extends Controller
     public function updateStudent( $id , Request $request)
     {
         $requestArray = $request->all();
+        // return $requestArray ;
         if(isset($request->contract_file))
         $requestArray['contract'] = $this->storeFile($request->contract_file);
         if(isset($request->photo_file))
         {
-
             $requestArray['photo'] = $this->storeFile($request->photo_file);
         }
+       
+        if(isset($request->medical_information_image2))
+        {
+            // return "test";
+            $requestArray['medical_information_image'] = $this->storeFile($request->medical_information_image2);
+            // return $request['medical_information_image'] ;
+        }
+        
+        if(isset($request->historicals))
+        {
+            $requestArray['historical'] = $this->storeFile($request->historicals);
+        }
+        if(isset($request->activities_images))
+        {
+            $requestArray['activities_image'] = $this->storeFile($request->activities_images);
+        }
+        if(isset($request->statement_enrolments))
+        {
+            $requestArray['Statement_enrolment'] = $this->storeFile($request->statement_enrolments);
+        }
 
+       if(isset($request->Transfers))
+        {
+            $requestArray['Transfer'] = $this->storeFile($request->Transfers);
+        }
+
+        if(isset($request->transfers))
+        {
+            $requestArray['transfers'] = $this->storeFile($request->transfers);
+        }
+
+        if(isset($request->Printouts))
+        {
+            $requestArray['Printout'] = $this->storeFile($request->Printouts);
+        }
+
+        ///////////////////
+        if(isset($request->Enrolments))
+        {
+            $requestArray['Enrolment'] = $this->storeFile($request->Enrolments);
+        }
+
+        if(isset($request->degrees))
+        {
+            $requestArray['degree'] = $this->storeFile($request->degrees);
+        }
+
+        if(isset($request->entrances))
+        {
+            $requestArray['entrance'] = $this->storeFile($request->entrances);
+        }
+
+
+        //////////////
+        if(isset($request->passports))
+        {
+            $requestArray['passport'] = $this->storeFile($request->passports);
+            // return $requestArray['passport'] ;
+        }
+        
+        if(isset($request->ministrys))
+        {
+            $requestArray['ministry'] = $this->storeFile($request->ministrys);
+        }
+
+        if(isset($request->guardian_passports))
+        {
+            $requestArray['guardian_passport'] = $this->storeFile($request->guardian_passports);
+        }
+        if(isset($request->birth_certificates))
+        {
+            $requestArray['birth_certificate'] = $this->storeFile($request->birth_certificates);
+        }
+        if(isset($request->objection_letters))
+        {
+            $requestArray['objection_letter'] = $this->storeFile($request->objection_letters);
+        }
         if(isset($requestArray['password']) && $requestArray['password'] != ""){
             $requestArray['password'] =  bcrypt($requestArray['password']);
         }else{
@@ -330,6 +406,7 @@ class HomeController extends Controller
         $student =  Student::findOrFail($id);
         $student->update($requestArray) ;
         session(['student_photo' => $student->photo]);
+        // return $student ;
         // return back();
         return  redirect('profile-student/'.$student->id);
     }
