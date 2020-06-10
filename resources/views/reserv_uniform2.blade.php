@@ -41,7 +41,7 @@
                                 <label  for="inputGroupSelect03"> Color: </label>
                             </div>
                             <div class="col-sm-10">
-                                <input type="color" name="color" id="inputGroupSelect03">
+                                <input type="text" name="color" id="inputGroupSelect03">
                             </div>
 
                             
