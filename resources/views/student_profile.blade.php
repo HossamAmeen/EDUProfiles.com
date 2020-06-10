@@ -73,34 +73,7 @@
                     <a class="btn btn-light test" href="{{url('interview/'.$student->id)}}">Interview & test </a>
                     {{-- <button type="button" class="btn btn-light test" >Interview & test</button> --}}
                     @endif
-                    @if(session('school_id')!=null)
-                    <div class="col-lg-12">
-
-                        <div class="icon-wrapper icon-two">
-                            <ul class="pre-links">
-                                <li>
-                                    <a href="{{url('show-reserv-uniform/'.session('school_id'))}}"
-                                        class='btn btn-default btn-outline-warning en'>
-                                        <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
-                                    </a>
-
-                                    <h5>view UNIFORM RESERVATION</h5>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="{{url('reserv-bus/'.session('school_id'))}}"
-                                        class='btn btn-default btn-outline-warning en'>
-                                        <i class="fa fa-bus fa-2x " aria-hidden="true"></i>
-                                    </a>
-                                    <h5>view BUS RESERVATION</h5>
-                                </li>
-
-                            </ul>
-
-
-                        </div>
-
-                    </div>
-                    @endif
+                    
                 </div>
                
             </div>
