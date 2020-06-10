@@ -40,49 +40,49 @@
                             details</label>
                         <div class="col-lg-10 col-md-12">
                             <input type="text" class="form-control" id="inputEmail3" name="details"
-                                placeholder="Details">
+                                placeholder="Details" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label   class="col-lg-2 col-md-12 col-form-label">Bus number</label>
                         <div class="col-lg-10 col-md-12">
                             <input type="text" class="form-control"   name="number"
-                                placeholder="Bus number">
+                                placeholder="Bus number" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label   class="col-lg-2 col-md-12 col-form-label">Bus routes</label>
                         <div class="col-lg-10 col-md-12">
                             <input type="text" class="form-control"   name="routes"
-                                placeholder="Bus routes">
+                                placeholder="Bus routes" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label   class="col-lg-2 col-md-12 col-form-label">Super visor name</label>
                         <div class="col-lg-10 col-md-12">
                             <input type="text" class="form-control"   name="Super_visor_name"
-                                placeholder="Super visor name">
+                                placeholder="Super visor name" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label   class="col-lg-2 col-md-12 col-form-label">Super visor number</label>
                         <div class="col-lg-10 col-md-12">
                             <input type="text" class="form-control"   name="Super_visor_number"
-                                placeholder="Super visor number">
+                                placeholder="Super visor number" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label   class="col-lg-2 col-md-12  col-form-label">Driver name</label>
                         <div class="col-lg-10 col-md-12">
                             <input type="text" class="form-control"   name="driver_name"
-                                placeholder="Driver name">
+                                placeholder="Driver name" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label   class="col-lg-2 col-md-12 col-form-label">Driver number</label>
                         <div class="col-lg-10 col-md-12">
                             <input type="text" class="form-control"   name="driver_number"
-                                placeholder="Driver number">
+                                placeholder="Driver number" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -90,7 +90,7 @@
                             places</label>
                         <div class="col-lg-10 col-md-12">
                             <input type="number" class="form-control"   name="number_available"
-                                placeholder="Number of afailable places">
+                                placeholder="Number of afailable places" required>
                         </div>
                     </div>
                     <div class="form-group row">
