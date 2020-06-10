@@ -68,6 +68,10 @@
                             <div class="card-footer text-center">
                                 <a href="{{url('choose-uniform/'.$item->id .'/' . $school_id)}}"  class="btn btn-outline-primary btn-lg  w-50  ">RESERVE</a>
                             </div>
+                            @elseif(session('school_id')!=null)
+                            <div class="card-footer text-center">
+                                <a href="{{url('delete-uniform/'.$item->id)}}"  class="btn btn-outline-danger btn-lg  w-50  ">delete</a>
+                            </div>
                             @endif
                         </div>
 

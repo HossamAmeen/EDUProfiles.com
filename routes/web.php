@@ -28,6 +28,8 @@ Route::get('send-profie/{school_id}', 'HomeController@registerInSchhool');
 Route::any('add-bus', 'HomeController@addBus');
 Route::any('add-uniform', 'HomeController@addUniform');
 
+Route::get('delete-bus/{id}', 'HomeController@deleteBus');
+Route::get('delete-uniform/{id}', 'HomeController@deleteUniform');
 
 
 Route::any('register-student-school-status/{student_id}/{status?}', 'HomeController@updateRegisterStudent');

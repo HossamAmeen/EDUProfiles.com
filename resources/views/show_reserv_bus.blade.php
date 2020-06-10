@@ -43,7 +43,11 @@
                     <th>Rout line</th>
                     @if(session('school_id')==null)
                     <th>Reserve</th>
+                    
+                    @elseif(session('school_id')!=null)
+                    <th></th>
                     @endif
+
                 </tr>
                
                     @foreach ($buses as $item)
@@ -61,6 +65,13 @@
                         <th><textarea name="route" id="" cols="15" rows="10" required></textarea></th>
                         @if(session('school_id')==null)
                         <th><button class="btn btn-primary">RESERVE</button></th>
+                        
+                        @elseif(session('school_id')!=null)
+                        <td>
+                       
+                            <a href="{{url('delete-bus/'.$item->id)}}"  class="btn btn-outline-danger">delete</a>
+                       
+                        </th>
                         @endif
                     </form>  
                 </tr>

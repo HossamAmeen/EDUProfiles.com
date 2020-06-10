@@ -581,7 +581,21 @@ class HomeController extends Controller
             ]);     
         return view('reserv_uniform2' , compact('uniformId'));
     }
-   
+    public function deleteBus($id)
+    {
+        
+        Bus::find($id)->delete();
+        // BusStudent::where('bus' , $id)->delete();
+        return redirect()->back()->withInput();
+        
+    }
+    public function deleteUniform($id)
+    {
+        
+        Uniform::find($id)->delete();
+        return redirect()->back()->withInput();
+        
+    }
     public function updateUniformReserv($uniformId , Request $request)
     {
           $reserv =   UniformStudent::find($uniformId);
