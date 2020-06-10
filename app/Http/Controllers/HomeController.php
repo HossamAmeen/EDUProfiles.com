@@ -569,7 +569,7 @@ class HomeController extends Controller
             $reserv->student_id = session('student_id');
             $reserv->quantity = 0 ;
             $reserv->color = "#0000" ;
-            $reserv->school_id = 1;
+            $reserv->school_id =  $school_id;
             $reserv->save();
 
             Notification::create([
