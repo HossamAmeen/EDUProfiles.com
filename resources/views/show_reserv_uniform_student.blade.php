@@ -63,6 +63,7 @@
                                     <h3 class="d-inline-block">STATUS:</h3>
                                     <h5 class="d-inline-block ml-4  text-primary ">{{$item->uniform->available}} </h5>
                                 </div>
+                               
                             </div>
                             <div class="card-footer text-center">
                                 <a href="{{url('delete-reserv-uniform/'.$item->id)}}"  class="btn btn-outline-danger btn-lg  w-50  ">cancel</a>

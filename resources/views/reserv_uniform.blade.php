@@ -63,6 +63,10 @@
                                     <h3 class="d-inline-block">STATUS:</h3>
                                     <h5 class="d-inline-block ml-4  text-primary ">{{$item->available}} </h5>
                                 </div>
+                                <div class="card-content">
+                                    <h3 class="d-inline-block">card number:</h3>
+                                    <h5 class="d-inline-block ml-4  text-primary ">{{$item->id}} </h5>
+                                </div>
                             </div>
                             @if(session('school_id')==null)
                             <div class="card-footer text-center">
