@@ -25,9 +25,9 @@ class HomeController extends Controller
     public function notification()
     {
         if(session('school_id') != null)
-        $datas['notifications'] = Notification::where('user_id' , session('school_id')) ->where('is_read',0)
+        $datas['notifications'] = Notification::where('user_id' , session('school_id'))->where('is_read',0)
         ->where('table' , 'schools')->count() ; 
-        else
+        elseif(session('student_id') != null)
         $datas['notifications'] =  Notification::where('user_id' , session('student_id'))->where('is_read',0)                                        
         ->where('table' , 'students')->count();
        
@@ -49,7 +49,7 @@ class HomeController extends Controller
             return view('school_notification' , $datas);
         }
        
-        else
+        elseif(session('student_id') != null)
         {
             $datas['notifications'] =  Notification::where('user_id' , session('student_id'))
                                                     ->where('is_read',0)                                        
@@ -467,6 +467,16 @@ class HomeController extends Controller
         $student =  Student::findOrFail($id);
         $student->update($requestArray) ;
         session(['student_photo' => $student->photo]);
+        if(isset($student->register->school)){
+            
+            Notification::create([
+                'text' => "register in new school",
+                'table'=> "schools",
+                'type' => "registering",
+                'is_read'=>0 ,
+                 "user_id" =>$student->register->school->id,
+            ]);
+        }
         // return $student ;
         // return back();
         return  redirect('profile-student/'.$student->id);
@@ -607,7 +617,14 @@ class HomeController extends Controller
         }
         
         $register->comment = $request->comment;
-        $register->save();     
+        $register->save();  
+        Notification::create([
+            'text' => "register in new school",
+            'table'=> "students",
+            'type' => "reserv bus",
+            'is_read'=>0 ,
+             "user_id" =>$student_id,
+        ]);   
         return redirect()->back();
         
     }
@@ -618,6 +635,13 @@ class HomeController extends Controller
             $request['student_id'] = $student_id ;
             Interview::create($request->all());
             session()->flash('interview' , "set interview seccussfully");
+            Notification::create([
+                'text' => "register in new school",
+                'table'=> "students",
+                'type' => "reserv bus",
+                'is_read'=>0 ,
+                 "user_id" =>$student_id,
+            ]);
             return redirect()->back();
             
         }

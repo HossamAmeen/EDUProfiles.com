@@ -26,4 +26,9 @@ class Student extends Model
         'Enrolment', 'degree', 'entrance',
         'activities', 'activities_image' , 'photo'
   ];
+
+  public function register()
+  {
+    return $this->hasOne(StudentSchool::class , "student_id");
+  }
 }
