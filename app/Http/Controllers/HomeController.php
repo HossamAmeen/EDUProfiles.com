@@ -599,9 +599,16 @@ class HomeController extends Controller
     public function updateUniformReserv($uniformId , Request $request)
     {
           $reserv =   UniformStudent::find($uniformId);
-          $reserv->quantity = $request->quantity ;
-          $reserv->color    =  $request->color ;
-          $reserv->save();
+          if(isset($reserv))
+          {
+            $reserv->quantity = $request->quantity ;
+            $reserv->color    =  $request->color ;
+            $reserv->save();
+          }
+          else
+          {
+              return $uniformId;
+          }
         
         session()->flash('uniform' , "reserve new uniform seccussfully");
         
