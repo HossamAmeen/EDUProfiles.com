@@ -26,10 +26,10 @@
                     <a href="{{url('students-registered')}}" class="btn btn-primary w-50  mt-5 p-3">STUDENT PROFILE</a>
                 </div>
                 <div class="row">
-                    <a href="#" class="btn btn-success w-50 mt-5 p-3">BUSSES RESERVATION</a>
+                    <a href="{{url('show-reserv-bus-school')}}" class="btn btn-success w-50 mt-5 p-3">BUSSES RESERVATION</a>
                 </div>
                 <div class="row">
-                    <a href="#" class="btn btn-danger w-50 mt-5 mb-5 p-3">UNIFORM RESERVATION</a>
+                    <a href="{{url('show-reserv-uniform-school')}}" class="btn btn-danger w-50 mt-5 mb-5 p-3">UNIFORM RESERVATION</a>
                 </div>
             </div>
         </div>

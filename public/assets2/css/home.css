@@ -1,4 +1,3 @@
-
 #header {
     height: 90px;
     transition: all 0.5s;
@@ -167,11 +166,6 @@ start home
 
 .icon2 {
     background-color: #ffb406cb;
-}
-
-.circle2 {
-    width: 55% !important;
-    height: 187px !important;
 }
 
 .icon-one .icon1 span,

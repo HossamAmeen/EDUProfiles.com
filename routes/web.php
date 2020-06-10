@@ -39,4 +39,17 @@ Route::get('get-notifications', 'HomeController@get_notification');
 Route::get('students-registered', 'HomeController@students_registered');
 Route::get('school-respones/{id}', 'HomeController@school_respones');
 
+Route::get('show-reserv-uniform-school', 'HomeController@show_reserv_uniform_school');
+Route::get('show-reserv-bus-school', 'HomeController@show_reserv_bus_school');
+Route::get('show-reserv-bus-student', 'HomeController@show_reserv_bus_student');
+Route::get('delete-reserv-bus/{id}', 'HomeController@delete_reserv_bus_student');
+Route::get('show-reserv-uniform-student', 'HomeController@show_reserv_uniform_student');
+Route::get('delete-reserv-uniform/{id}', 'HomeController@delete_reserv_uniform');
+
 Route::get('logout', 'HomeController@logout');
+
+Route::any('reserv-bus/{schoolId}/{busId?}' , 'HomeController@reserv_bus');
+
+Route::any('show-reserv-uniform/{schoolId}', 'HomeController@show_reserv_uniform');
+Route::any('choose-uniform/{uniFormId}/{schoolId}', 'HomeController@chooseUniform');
+Route::any('update-reserv-uniform/{uniFormId}', 'HomeController@updateUniformReserv');

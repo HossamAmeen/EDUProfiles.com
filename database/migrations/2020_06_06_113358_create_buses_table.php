@@ -24,6 +24,7 @@ class CreateBusesTable extends Migration
             $table->string('driver_name');
             $table->string('driver_number');
             $table->integer('number_available');
+            $table->integer('school_id');
             $table->timestamps();
         });
     }

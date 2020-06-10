@@ -6,11 +6,14 @@ use App\School;
 use App\Student;
 use App\StudentSchool;
 use App\Bus;
+use App\Uniform;
+use App\UniformStudent;
+use App\BusStudent;
 use App\Interview;
 use App\Notification;
 use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
-use Hash , Redirect;
+use Hash , Redirect  , DB;
 class HomeController extends Controller
 {
     
@@ -58,6 +61,67 @@ class HomeController extends Controller
             return view('student_notification' , $datas);
         }
     }
+    public function show_reserv_uniform_school()
+    {
+        $uniforms = UniformStudent::orderBy('uniform_id')->where('school_id' , session('school_id'))->get();
+        // $uniforms = UniformStudent::get()->groupBy('uniform_id');
+        // // $uniforms = DB::table('uniform_students')
+        // //          ->select('uniform_id')
+        // //          ->groupBy('uniform_id')
+        // //          ->get();
+        // return $collection;
+      
+        return view('show_reserv_uniform_school' , compact('uniforms'));
+    }
+    public function show_reserv_bus_school()
+    {
+        $buses = BusStudent::where('school_id' , session('school_id'))->get();
+        return view('show_reserv_bus_school'  , compact('buses'));
+    }
+    public function reserv_bus(Request $request , $school_id , $bus_id =null)
+    {
+        if($request->isMethod('post')){
+           $reserv = new BusStudent();
+           $reserv->student_id = session('student_id');
+           $reserv->bus_id = $bus_id;
+           $reserv->school_id = $school_id;
+           $reserv->route =  $request->route;
+           $reserv->save();
+           Notification::create([
+            'text' => "register in new school",
+            'table'=> "schools",
+            'type' => "reserv bus",
+            'is_read'=>0 ,
+             "user_id" =>$school_id,
+        ]);
+           session()->flash('reservBus' , 'Successfully booked');
+           return redirect()->back();
+           
+        }
+        $school_name = School::find($school_id)->name;
+        $buses = Bus::where('school_id' , $school_id)->get();
+        return view('show_reserv_bus'  , compact('buses' , 'school_name' , 'school_id'));
+    }
+    public function show_reserv_bus_student()
+    {
+        $reserv = BusStudent::where('student_id' , session('student_id'))->first();
+        $buses = array();
+        $school_name = "";
+        if(isset($reserv))
+        {
+            $buses = Bus::find($reserv->bus_id);
+            $school_name = School::find($buses->school_id)->name;
+        }
+        
+        return view('show_reserv_bus_student'  , compact('buses' , 'reserv' , 'school_name'));
+    }
+    public function delete_reserv_bus_student($id)
+    {
+        BusStudent::find($id)->delete();
+        session()->flash('deleteReserv' , 'Reservation canceled successfully');
+           return redirect()->back();
+    }
+    
     public function students_registered()
     {
         if(session('school_id') != null)
@@ -252,13 +316,10 @@ class HomeController extends Controller
         $school =  School::findOrFail($id) ;
         $regisered = 0 ;
         if(session('student_id') != null){
-            
             $student = StudentSchool::where('student_id', session('student_id'))->where('school_id' , $id)->first();
             if($student){
               $regisered = 1;
-                
             }
-           
         }
         return view("schhool_profile" , compact('school' , 'id' , 'regisered'));
     }
@@ -461,6 +522,7 @@ class HomeController extends Controller
     {
         if($request->isMethod('post'))
         {
+            $request['school_id'] = session('school_id');
             Bus::create($request->all());
             session()->flash('bus' , "add new bus seccussfully");
             return  redirect()->back();
@@ -468,6 +530,74 @@ class HomeController extends Controller
         return view('add_bus');
     }
 
+    public function addUniform (Request $request)
+    {
+        if($request->isMethod('post'))
+        {
+            if(isset($request->file))
+            $request['image'] = $this->storeFile($request->file);
+            
+            $request['school_id'] = session('school_id');
+            Uniform::create($request->all());
+            session()->flash('uniform' , "add new uniform seccussfully");
+            return  redirect()->back();
+        }
+        return view('add_uniform');
+    }
+
+    public function show_reserv_uniform(Request $request , $school_id)
+    {
+        
+        $uniforms = Uniform::where('school_id' , $school_id)->get();
+        return view('reserv_uniform' , compact('uniforms' , 'school_id'));
+    }
+    public function chooseUniform($uniformId , $school_id)
+    {          
+            $reserv = new UniformStudent();
+            $reserv->uniform_id = $uniformId;
+            $reserv->student_id = session('student_id');
+            $reserv->quantity = 0 ;
+            $reserv->color = "#0000" ;
+            $reserv->school_id = 1;
+            $reserv->save();
+
+            Notification::create([
+                'text' => "register in new school",
+                'table'=> "schools",
+                'type' => "unifrom",
+                'is_read'=>0 ,
+                 "user_id" =>$reserv->school_id ,
+            ]);     
+        return view('reserv_uniform2' , compact('uniformId'));
+    }
+   
+    public function updateUniformReserv($uniformId , Request $request)
+    {
+          $reserv =   UniformStudent::find($uniformId);
+          $reserv->quantity = $request->quantity ;
+          $reserv->color    =  $request->color ;
+          $reserv->save();
+        
+        session()->flash('uniform' , "reserve new uniform seccussfully");
+        
+        return  redirect('show-reserv-uniform/'.$reserv->uniform->school_id);
+        // return \Redirect::route('show.reserv.uniform' ,$reserv->school_id);
+        
+        
+    }
+    public function show_reserv_uniform_student()
+    {
+        $uniforms =  UniformStudent::where('student_id' , session('student_id'))->get();
+        // return $uniforms;
+        return view('show_reserv_uniform_student' , compact('uniforms'));
+    }
+    public function delete_reserv_uniform($id)
+    {
+        $uniforms =  UniformStudent::find($id)->delete();
+        
+        return redirect()->back();
+        
+    }
     public function updateRegisterStudent(Request $request , $student_id , $status = 0)
     {
         $register = StudentSchool::where('school_id', session('school_id') )

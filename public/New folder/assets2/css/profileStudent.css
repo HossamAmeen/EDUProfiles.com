@@ -1,0 +1,550 @@
+a {
+    color: #fe5629;
+    transition: 0.5s;
+  }
+  
+  a:hover, a:active, a:focus {
+    color: #fe5629;
+    outline: none;
+    text-decoration: none;
+  }
+  
+  p {
+    padding: 0;
+    margin: 0 0 30px 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+  
+  .profile .content h5, .profile .content label {
+    color: #3b526a;
+    font-size: 18px;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url('../img/index-img/WhatsApp\ Image\ 2020-05-30\ at\ 8.16.22\ PM.jpeg ');
+}
+
+ 
+
+/* ----  Profile student ----- */
+.profile{
+	margin-top:150px;
+	
+
+}
+.profile .container,.school-prof .container{
+  padding-top: 20px;
+	background:#F3F3F3;
+	border-radius: 10px;
+	border-bottom: 3px solid #ffb606;
+	padding-left: 30px;
+}
+.profile .btn{
+	box-shadow:0 0 3px #232324;
+	border-radius:30px;
+	padding:10px 25px;
+	margin:25px 2px;
+  
+	
+}
+.profile .form-group .btn{
+	text-decoration:underline;
+	background:none;
+	color:#333;
+	position:relative;
+	top:-25px;
+	box-shadow:0 0 5px #003499;
+}
+.profile .button .dropdown-toggle {
+  font-size: larger;
+}
+.profile .col-lg-3{
+  margin-bottom: 60px;
+ 
+}
+.profile .button{
+  text-align:center
+}
+.profile  .button form label{
+font-family: initial;
+margin-top: 20px;
+}
+.profile .button .form-control{
+  border-radius: .4rem;
+}
+
+
+    
+.profile .name h3{
+	color:#3b526a;
+}
+.profile .parent h3,.profile .father h3{
+	color:#3b526a;
+	margin-top:30px;
+	font-size:25px;
+}
+.profile .father h3{
+	margin-top:-8px;
+	
+}@media(max-width:991px){
+	.profile .form-group .btn{
+	background:#3b526a;
+	border-radius:30px;
+	padding:10px 20px;
+	margin-top:15px;
+	color:#fff;
+
+}
+	
+}
+.profile .name p{
+	color:#0a98c0;
+}
+.profile .image{
+	overflow:hidden;
+	width:100%;
+	border:1px solid #3b526a;
+	border-radius:50%;
+}
+.profile .image img{
+	width:100%;
+	
+}
+.profile .image:hover  img{
+	transform:scale(1.1);
+	transition:1s;
+}
+.profile .content .level{
+	color:#0a98c0;
+	position:relative;
+	margin-bottom:60px;
+}
+.profile .content .level:after{
+	content:"";
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
+	margin-top:-10px;
+	width:100px;
+	height:2px;
+	background:#3b526a;
+	
+}
+.profile .content h5,.profile .content label{
+	color:#3b526a;
+	font-size:18px;
+	
+}
+.profile .content h4{
+	color:#3b526a;
+	font-size:25px;
+	font-weight:700;
+	
+}
+
+
+/* end profile student */
+
+/* start footer */
+  
+#footer {
+    padding: 0 0 30px 0;
+    font-size: 14px;
+    background: #fff;
+}
+
+#footer .footer-top {
+    padding: 60px 0 30px 0;
+    background: #f5f8fd;
+}
+
+#footer .footer-top .footer-info {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info h3 {
+    font-size: 34px;
+    margin: 0 0 20px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-family: "Montserrat", sans-serif;
+    color: #413e66;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#footer .footer-top .footer-info p {
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #535074;
+}
+
+#footer .footer-top .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #1bb1dc;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+    background: #0a98c0;
+    color: #fff;
+}
+
+@media (max-width: 574px) {
+    #footer .footer-top .social-links a {
+        margin-bottom: 25px;
+    }
+}
+
+#footer .footer-top h4 {
+    font-weight: bold;
+    color: #fe5629;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 3px;
+}
+
+#footer .footer-links .content {
+    margin-bottom: 20px;
+}
+
+#footer .footer-links .content i {
+    margin-right: 10px;
+    color: #0A98C0;
+}
+
+#footer .footer-top .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer .footer-top .footer-links ul li {
+    padding: 8px 0;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+    padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+    color: #696592;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+    color: #1bb1dc;
+}
+
+#footer .footer-top .footer-contact {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact p {
+    line-height: 26px;
+}
+
+#footer .footer-top .footer-newsletter {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-newsletter input[type="email"] {
+    border: 0;
+    padding: 6px 8px;
+    width: 65%;
+    border: 1px solid #d9dde6;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"] {
+    background: #1bb1dc;
+    border: 1px solid #1bb1dc;
+    width: 35%;
+    padding: 6px 0;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"]:hover {
+    background: #0a98c0;
+}
+
+#footer .php-email-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+#footer .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+#footer .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+#footer .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+#footer .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+}
+
+#footer .php-email-form input,
+#footer .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #dce1ec;
+    font-size: 14px;
+}
+
+#footer .php-email-form input::focus,
+#footer .php-email-form textarea::focus {
+    background-color: #1bb1dc;
+}
+
+#footer .php-email-form input {
+    padding: 20px 15px;
+}
+
+#footer .php-email-form textarea {
+    padding: 12px 15px;
+}
+
+#footer .php-email-form button[type="submit"] {
+    background: #fe5629;
+    border: 0;
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+#footer .php-email-form button[type="submit"]:hover {
+    background: #5e752d;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+@-webkit-keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#footer .credits {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 4px;
+    color: #8582a8;
+}
+
+#footer .credits a {
+    color: #1bb1dc;
+}
+
+#footer .credits a:hover {
+    color: #0a98c0;
+}
+
+.footer {
+    background: #333333;
+    color: #fff;
+    padding: 70px 0;
+}
+
+.footer .inline-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #fe5629;
+}
+
+.footer .inline-content p {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 25px;
+    font-size: 18px;
+    color: #fff;
+    padding-top: 14px;
+}
+
+.footer .inline-content h5 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #ffb606;
+}
+
+.footer .inline-content .pre-links li {
+    margin-bottom: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+    transition: 0.6s;
+}
+
+.footer .inline-content i {
+    color: #fff;
+    margin-right: 10px;
+    transition: 0.6s;
+    border: 2px solid #ffb606;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.footer .inline-content li {
+    margin-bottom: 10px;
+    color: #878787;
+    transition: 0.6s;
+    padding-top: 25px;
+    font-size: 24px;
+}
+
+.footer .inline-content .content:hover {
+    color: #fff;
+}
+
+.footer .inline-content .pre-links li:hover {
+    color: #ffb606;
+}
+
+.footer .inline-content .content:hover i {
+    color: #fff;
+}
+
+.pre-links li {
+    cursor: pointer;
+    list-style-type: none;
+}
+
+
+/*contact in footer*/
+
+.contact_form h5 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #ffb606;
+}
+
+.input_field {
+    width: 100%;
+    background: #f8f4f4;
+    border: solid 2px transparent;
+    margin-bottom: 24px;
+    height: 42px;
+    padding-left: 33px;
+    border-radius: 4px;
+}
+
+.contact_form_container {
+    margin-top: 50px;
+}
+
+.text_field {
+    width: 100%;
+    height: 113px;
+    background: #f8f4f4;
+    border: solid 2px transparent;
+    padding-left: 33px;
+    margin-bottom: 14px;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+    border-radius: 4px;
+    height: 50px;
+}
+
+.contact_send_btn {
+    width: 50%;
+    margin: auto;
+    height: 48px;
+    background: #ffb606;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.contact_send_btn:hover {
+    background: #1bb1dc;
+}
+
+input:focus {
+    border: solid 3px #ffb606;
+}
+
+textarea:focus {
+    border: solid 3px #ffb606;
+}
+
+form {
+    text-align: center;
+}
+
+/* end profile student */

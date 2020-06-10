@@ -45,13 +45,13 @@
         <div class="overlay"></div>
         <div class="container btns">
             <div class="row">
-                <a class="btn btn-success w-50 mt-3 mb-5 p-3">BUSSES RESERVATION</a>
+                <a href="{{url('show-reserv-bus-student')}}"  class="btn btn-success w-50 mt-3 mb-5 p-3">BUSSES RESERVATION</a>
             </div>
             <div class="row">
                 <a href="{{url('school-respones/'.$student_id)}}" class="btn btn-primary w-50 mt-3 mb-5 p-3">SCHOOL DECISION</a>
             </div>
             <div class="row ">
-                <a href="#" class="btn btn-danger w-50 mt-3 mb-5 p-3" id="collabse">UNIFORM RESERVATION</a>
+                <a href="{{url('show-reserv-uniform-student')}}" class="btn btn-danger w-50 mt-3 mb-5 p-3" id="collabse">UNIFORM RESERVATION</a>
             </div>
 
 

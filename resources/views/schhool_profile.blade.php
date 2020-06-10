@@ -25,13 +25,13 @@
                         <h1>{{$school->name}}</h1>
                     </div>
                     @if (session()->get('register') )
-                <div class="alert alert-success" style="text-align: center">
-                    <strong>{{session()->get('register')}}</strong>
-                </div>
-                @endif
+                    <div class="alert alert-success" style="text-align: center">
+                        <strong>{{session()->get('register')}}</strong>
+                    </div>
+                    @endif
                 </div>
                 <!--col-->
-                
+
                 <div class="col-lg-12">
                     <div class="images">
                         <img src="{{asset($school->photo ?? 'assets2/images/school2.jpeg')}}">
@@ -143,13 +143,45 @@
                                                 </div>
 
                                             </div>
-                                           
+
                                             <a href="{{url('profile-school-edit/'.$id)}}" class="btn btn-info">edit</a>
                                             <a href="{{url('logout')}}" class="btn btn-primary">LOG OUT</a>
                                             @endif
-                                         
-                                             
-                  
+                                            @if(session('student_id') != null)
+                                            <!--card-->
+                                            <div class="row">
+                                                <div class="col-lg-12">
+
+                                                    <div class="icon-wrapper icon-two">
+                                                        <ul class="pre-links">
+                                                            <li>
+                                                                <a href="{{url('show-reserv-uniform/'.$school->id)}}"
+                                                                    class='btn btn-default btn-outline-warning en'>
+                                                                    <i class="fa fa-user-circle fa-2x"
+                                                                        aria-hidden="true"></i>
+                                                                </a>
+
+                                                                <h5>UNIFORM RESERVATION</h5>
+                                                            </li>
+                                                            <li class="nav-item ">
+                                                                <a href="{{url('reserv-bus/'.$school->id)}}"
+                                                                    class='btn btn-default btn-outline-warning en'>
+                                                                    <i class="fa fa-bus fa-2x " aria-hidden="true"></i>
+                                                                </a>
+                                                                <h5>BUS RESERVATION</h5>
+                                                            </li>
+
+                                                        </ul>
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            @endif
+
+
                                         </div>
 
 
@@ -168,10 +200,10 @@
 
                 </div>
 
-               
+
                 <!--col-->
 
-             
+
                 <div class="col-lg-7 vertical-line">
 
                     <div class="content">
@@ -555,21 +587,21 @@
                 </div>
                 <!--row-->
                 @if(session('student_id') != null)
-                    @if(isset($regisered) )
-                    <div class="col-lg-12 form text-center">
-                        <div class="submit">
-                            @if($regisered == 1)
-                                <h6 class="last" style="margin: 1% 30%">You have sent your profile</h6>
-                            @else
-                            <a  class="btn last" style="color: black" href="{{url('send-profie/'.$school->id )}}">
+                @if(isset($regisered) )
+                <div class="col-lg-12 form text-center">
+                    <div class="submit">
+                        @if($regisered == 1)
+                        <h6 class="last" style="margin: 1% 30%">You have sent your profile</h6>
+                        @else
+                        <a class="btn last" style="color: black" href="{{url('send-profie/'.$school->id )}}">
                             send profile</a>
-                            @endif
-                        </div>
+                        @endif
                     </div>
-                    @endif
+                </div>
+                @endif
                 @endif
                 <!--col-->
-               
+
             </div>
             <!--row-->
         </div>
@@ -579,7 +611,7 @@
 
     </section>
     <!--end ::section school-prof-->
-@include('newFooter')
+    @include('newFooter')
 
     <script src="{{asset('assets2/js/jquery-3.3.1.min.js')}}"></script>
     <script src="{{asset('assets2/js/popper.min.js')}}"></script>

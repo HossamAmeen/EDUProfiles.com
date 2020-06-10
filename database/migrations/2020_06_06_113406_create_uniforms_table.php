@@ -15,6 +15,15 @@ class CreateUniformsTable extends Migration
     {
         Schema::create('uniforms', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('image');
+            $table->string('category');
+            $table->string('type');
+            $table->string('size');
+            $table->string('color');
+            $table->string('available');
+            $table->integer('quantity');
+            $table->integer('school_id');
+           
             $table->timestamps();
         });
     }

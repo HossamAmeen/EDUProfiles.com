@@ -1,0 +1,115 @@
+
+#header {
+  height: 90px;
+  transition: all 0.5s;
+  position: fixed;
+  top: 0%;
+  z-index: 999999;
+  left: 5%;
+  right: 5%;
+  background-color: white;
+  box-shadow: 2px 2px 20px gray ;
+  
+}
+#navbarSupportedContent{
+  background-color: white;
+  margin-top: 8px;
+}
+#header .navbar-light{
+  background: none;
+}
+   .navbar-brand h1 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    font-weight: bold;
+    color: #3a3a3a ;
+    text-decoration: none;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-family: 'Arapey';
+
+}
+.nav .fas{
+  color: #3a3a3a;
+  font-size: 25px;
+}
+
+.nav .navbar-nav li a {
+  padding-top: 8px;
+  transition: 0.3s;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #3a3a3a;
+
+}
+  .navbar-light .navbar-nav .nav-link ,.active1{
+    color: #3a3a3a !important;
+  }
+
+.navbar-brand  h1  img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navbar-light .navbar-nav .nav-link.disabled{
+  color: #3a3a3a !important;
+}
+.navbar-light .navbar-nav .nav-link:focus,
+ .navbar-light .navbar-nav .nav-link:hover,
+ .navbar-light .navbar-nav .nav-link:active,
+ .navbar-light .navbar-nav .nav-link span:hover{
+  color:#ffb606  !important
+}
+.navbar-light .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: .6rem;
+  padding-left: .6rem;
+}
+
+
+@media(max-width:600px){
+  .home .lead {
+    font-size: 1.75rem;
+  }
+}
+
+
+@media(max-width:992px){
+  .navbar-light .navbar-nav .nav-link {
+    border-bottom: 1px solid #ffb606;
+
+  }
+  .navbar-light .navbar-nav .nav-link:hover {
+  padding-left: 20px;
+  }
+
+}
+
+
+@media(max-width:574px){
+
+  #header .navbar-brand h1{
+    font-size: 28px;
+  }
+ 
+}
+
+@media(max-width:420px){
+  
+  #header .navbar-brand h1{
+    font-size: 20px;
+    line-height: 2.7;
+  }
+ 
+}
+
+
+
+
