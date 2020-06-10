@@ -41,7 +41,9 @@
                     <th>Driver number</th>
                     <th>number of available places</th>
                     <th>Rout line</th>
+                    @if(session('school_id')==null)
                     <th>Reserve</th>
+                    @endif
                 </tr>
                
                     @foreach ($buses as $item)
@@ -57,7 +59,9 @@
                         <td> {{$item->driver_number}}</td>
                         <td>{{$item->number_available}} </td>
                         <th><textarea name="route" id="" cols="15" rows="10" required></textarea></th>
+                        @if(session('school_id')==null)
                         <th><button class="btn btn-primary">RESERVE</button></th>
+                        @endif
                     </form>  
                 </tr>
                     @endforeach

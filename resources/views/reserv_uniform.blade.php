@@ -64,9 +64,11 @@
                                     <h5 class="d-inline-block ml-4  text-primary ">{{$item->available}} </h5>
                                 </div>
                             </div>
+                            @if(session('school_id')==null)
                             <div class="card-footer text-center">
                                 <a href="{{url('choose-uniform/'.$item->id .'/' . $school_id)}}"  class="btn btn-outline-primary btn-lg  w-50  ">RESERVE</a>
                             </div>
+                            @endif
                         </div>
 
                         

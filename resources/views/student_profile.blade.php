@@ -73,9 +73,36 @@
                     <a class="btn btn-light test" href="{{url('interview/'.$student->id)}}">Interview & test </a>
                     {{-- <button type="button" class="btn btn-light test" >Interview & test</button> --}}
                     @endif
+                    @if(session('school_id')!=null)
+                    <div class="col-lg-12">
 
+                        <div class="icon-wrapper icon-two">
+                            <ul class="pre-links">
+                                <li>
+                                    <a href="{{url('show-reserv-uniform/'.session('school_id'))}}"
+                                        class='btn btn-default btn-outline-warning en'>
+                                        <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+                                    </a>
+
+                                    <h5>view UNIFORM RESERVATION</h5>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="{{url('reserv-bus/'.session('school_id'))}}"
+                                        class='btn btn-default btn-outline-warning en'>
+                                        <i class="fa fa-bus fa-2x " aria-hidden="true"></i>
+                                    </a>
+                                    <h5>view BUS RESERVATION</h5>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+                    @endif
                 </div>
-
+               
             </div>
             <div class="col-lg-9">
                 <div class="content">
@@ -303,10 +330,10 @@
                                 <h4>{{$student->silibings_number}}</h4>
                                 <h6>{{$student->silibings}}</h6>
                             </div>
-                            
+
 
                         </div>
-                      
+
                     </div>
                     <!--row-->
 
@@ -332,33 +359,33 @@
                 <div class="content">
                     <div class="row">
 
-                       
-                                                
+
+
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5>medical information:</h5>
                                 <h4>{{$student->medical_information}}</h4>
-                               
+
                             </div>
-                            
-                            
+
+
                         </div>
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5> - Other medical information:</h5>
-                               
+
                                 <h6>{{$student->medical_information_text}}</h6>
                             </div>
-                            
+
 
                         </div>
-                        @if(isset($student->medical_information_image))          
+                        @if(isset($student->medical_information_image))
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5> </h5>
                                 <img src="{{asset($student->medical_information_image)}}" height="80" width="80">
                             </div>
-                            
+
 
                         </div>
                         @endif
@@ -387,16 +414,16 @@
                 <div class="content">
                     <div class="row">
 
-                       
-                        @if(isset($student->Enrolment))                         
+
+                        @if(isset($student->Enrolment))
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5>Enrolment and success certificate</h5>
                                 <img src="{{asset($student->Enrolment)}}" height="80" width="80">
-                               
+
                             </div>
-                            
-                            
+
+
                         </div>
                         @endif
                         @if(isset($student->degree))
@@ -405,10 +432,10 @@
                                 <h5>Latest degree
                                     attained translated into Arabic</h5>
                                 <img src="{{asset($student->degree)}}" height="80" width="80">
-                               
+
                             </div>
-                            
-                            
+
+
                         </div>
                         @endif
                         @if(isset($student->entrance))
@@ -416,10 +443,10 @@
                             <div class="content">
                                 <h5>entrance stamp</h5>
                                 <img src="{{asset($student->entrance)}}" height="80" width="80">
-                               
+
                             </div>
-                            
-                            
+
+
                         </div>
                         @endif
                         @if(isset($student->passport))
@@ -427,10 +454,10 @@
                             <div class="content">
                                 <h5>passport</h5>
                                 <img src="{{asset($student->passport)}}" height="80" width="80">
-                               
+
                             </div>
-                            
-                            
+
+
                         </div>
                         @endif
                         @if(isset($student->guardian_passport))
@@ -438,10 +465,10 @@
                             <div class="content">
                                 <h5>guardian passport</h5>
                                 <img src="{{asset($student->guardian_passport)}}" height="80" width="80">
-                               
+
                             </div>
-                            
-                            
+
+
                         </div>
                         @endif
                         @if(isset($student->objection_letter))
@@ -449,10 +476,10 @@
                             <div class="content">
                                 <h5>objection letter</h5>
                                 <img src="{{asset($student->objection_letter)}}" height="80" width="80">
-                               
+
                             </div>
-                            
-                            
+
+
                         </div>
                         @endif
                         @if(isset($student->birth_certificate))
@@ -460,10 +487,10 @@
                             <div class="content">
                                 <h5>birth certificate</h5>
                                 <img src="{{asset($student->birth_certificate)}}" height="80" width="80">
-                               
+
                             </div>
-                            
-                            
+
+
                         </div>
                         @endif
                     </div>
@@ -491,28 +518,28 @@
                 <div class="content">
                     <div class="row">
 
-                        
-                        @if(isset($student->historical))                         
+
+                        @if(isset($student->historical))
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5>historical log
                                     from the transferring school </h5>
                                 <img src="{{asset($student->historical)}}" height="80" width="80">
-                               
+
                             </div>
-                            
-                            
+
+
                         </div>
                         @endif
-                        @if(isset($student->Statement_enrolment))                         
+                        @if(isset($student->Statement_enrolment))
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5>statement enrolment</h5>
                                 <img src="{{asset($student->Statement_enrolment)}}" height="80" width="80">
-                               
+
                             </div>
-                            
-                            
+
+
                         </div>
                         @endif
                         @if(isset($student->Transfer))
@@ -521,10 +548,10 @@
                                 <h5>Transfer request
                                     form sealed from the transferring school </h5>
                                 <img src="{{asset($student->Transfer)}}" height="80" width="80">
-                               
+
                             </div>
-                            
-                            
+
+
                         </div>
                         @endif
                         @if(isset($student->transfers))
@@ -533,10 +560,10 @@
                                 <h5>For transfers from
                                     another governorate</h5>
                                 <img src="{{asset($student->transfers)}}" height="80" width="80">
-                               
+
                             </div>
-                            
-                            
+
+
                         </div>
                         @endif
                         @if(isset($student->Printout))
@@ -546,13 +573,13 @@
                                     electronic transfer document sealed by the transferring
                                     school</h5>
                                 <img src="{{asset($student->Printout)}}" height="80" width="80">
-                               
+
                             </div>
-                            
-                            
+
+
                         </div>
                         @endif
-                       
+
                     </div>
                     <!--row-->
 
@@ -578,19 +605,19 @@
                 <div class="content">
                     <div class="row">
 
-                       
-                                                
+
+
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5>{{$student->activities}}</h5>
-                                @if(isset($student->activities_image)) 
+                                @if(isset($student->activities_image))
                                 <img src="{{asset($student->activities_image)}}" height="80" width="80">
-                               @endif
+                                @endif
                             </div>
-                            
-                            
+
+
                         </div>
-                       
+
                     </div>
                     <!--row-->
 
