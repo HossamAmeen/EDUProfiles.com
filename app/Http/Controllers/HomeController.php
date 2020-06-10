@@ -578,7 +578,8 @@ class HomeController extends Controller
                 'type' => "unifrom",
                 'is_read'=>0 ,
                  "user_id" =>$reserv->school_id ,
-            ]);     
+            ]);   
+            $uniformId =   $reserv->id;
         return view('reserv_uniform2' , compact('uniformId'));
     }
     public function deleteBus($id)
