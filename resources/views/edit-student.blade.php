@@ -1035,7 +1035,7 @@
                                                         student was enrolled in since joining the school
                                                         :</label>
                                                     <input type="file" id="myfile" class="control"
-                                                        name="historical"><br>
+                                                        name="historicals"><br>
                                                     {{--   --}}
 
 
@@ -1047,7 +1047,7 @@
                                                         enrolment or statement of success sealed by the
                                                         educational administration:</label>
                                                     <input type="file" id="myfile" class="control"
-                                                        name="Statement_enrolment"><br>
+                                                        name="Statement_enrolments"><br>
                                                     {{--   --}}
 
 
@@ -1060,7 +1060,7 @@
                                                         educational
                                                         department affiliating this school to "New school name
                                                         ":</label>
-                                                    <input type="file" id="myfile" class="control" name="Transfer"><br>
+                                                    <input type="file" id="myfile" class="control" name="Transfers"><br>
                                                     {{--   --}}
 
 
@@ -1073,7 +1073,7 @@
                                                         be sealed from the governorate’s central educational
                                                         department as well as the new central educational
                                                         department :</label>
-                                                    <input type="file" id="myfile" class="control" name="transfers"><br>
+                                                    <input type="file" id="myfile" class="control" name="transferss"><br>
                                                     {{--   --}}
 
 
@@ -1084,7 +1084,7 @@
                                                     <label for="myfile" class="col-sm-12">5- Printout of the
                                                         electronic transfer document sealed by the transferring
                                                         school :</label>
-                                                    <input type="file" id="myfile" class="control" name="Printout"><br>
+                                                    <input type="file" id="myfile" class="control" name="Printouts"><br>
                                                     {{--   --}}
 
 

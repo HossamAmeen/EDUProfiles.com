@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="{{asset('assets2/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets2/css/owl.theme.default.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets2/css/uniform_cards.css')}}" />
-
+    <style>
+        .owl-carousel {
+            height: 300px !important;
+        }
+    </style>
 
 </head>
 

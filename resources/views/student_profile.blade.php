@@ -352,6 +352,7 @@
                             
 
                         </div>
+                        @if(isset($student->medical_information_image))          
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5> </h5>
@@ -360,6 +361,7 @@
                             
 
                         </div>
+                        @endif
                     </div>
                     <!--row-->
 
@@ -386,7 +388,7 @@
                     <div class="row">
 
                        
-                                                
+                        @if(isset($student->Enrolment))                         
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5>Enrolment and success certificate</h5>
@@ -396,6 +398,8 @@
                             
                             
                         </div>
+                        @endif
+                        @if(isset($student->degree))
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5>Latest degree
@@ -406,6 +410,8 @@
                             
                             
                         </div>
+                        @endif
+                        @if(isset($student->entrance))
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5>entrance stamp</h5>
@@ -415,7 +421,8 @@
                             
                             
                         </div>
-
+                        @endif
+                        @if(isset($student->passport))
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5>passport</h5>
@@ -425,6 +432,8 @@
                             
                             
                         </div>
+                        @endif
+                        @if(isset($student->guardian_passport))
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5>guardian passport</h5>
@@ -434,6 +443,8 @@
                             
                             
                         </div>
+                        @endif
+                        @if(isset($student->objection_letter))
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5>objection letter</h5>
@@ -443,6 +454,8 @@
                             
                             
                         </div>
+                        @endif
+                        @if(isset($student->birth_certificate))
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5>birth certificate</h5>
@@ -452,6 +465,7 @@
                             
                             
                         </div>
+                        @endif
                     </div>
                     <!--row-->
 
@@ -460,7 +474,93 @@
             </div>
 
         </div>
+        {{-- school --}}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="parent text-left">
+                    <hr>
 
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="father">
+                    <h3>school</h3>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="content">
+                    <div class="row">
+
+                        
+                        @if(isset($student->historical))                         
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>historical log
+                                    from the transferring school </h5>
+                                <img src="{{asset($student->historical)}}" height="80" width="80">
+                               
+                            </div>
+                            
+                            
+                        </div>
+                        @endif
+                        @if(isset($student->Statement_enrolment))                         
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>statement enrolment</h5>
+                                <img src="{{asset($student->Statement_enrolment)}}" height="80" width="80">
+                               
+                            </div>
+                            
+                            
+                        </div>
+                        @endif
+                        @if(isset($student->Transfer))
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>Transfer request
+                                    form sealed from the transferring school </h5>
+                                <img src="{{asset($student->Transfer)}}" height="80" width="80">
+                               
+                            </div>
+                            
+                            
+                        </div>
+                        @endif
+                        @if(isset($student->transfers))
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5>For transfers from
+                                    another governorate</h5>
+                                <img src="{{asset($student->transfers)}}" height="80" width="80">
+                               
+                            </div>
+                            
+                            
+                        </div>
+                        @endif
+                        @if(isset($student->Printout))
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h5> Printout of the
+                                    electronic transfer document sealed by the transferring
+                                    school</h5>
+                                <img src="{{asset($student->Printout)}}" height="80" width="80">
+                               
+                            </div>
+                            
+                            
+                        </div>
+                        @endif
+                       
+                    </div>
+                    <!--row-->
+
+                </div>
+                <!--content-->
+            </div>
+
+        </div>
         {{-- acitivty  --}}
         <div class="row">
             <div class="col-lg-12">
@@ -483,8 +583,9 @@
                         <div class="col-lg-6">
                             <div class="content">
                                 <h5>{{$student->activities}}</h5>
-                                <img src="{{asset($student->Enrolment)}}" height="80" width="80">
-                               
+                                @if(isset($student->activities_image)) 
+                                <img src="{{asset($student->activities_image)}}" height="80" width="80">
+                               @endif
                             </div>
                             
                             

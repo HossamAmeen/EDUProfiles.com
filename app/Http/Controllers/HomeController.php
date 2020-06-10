@@ -398,9 +398,9 @@ class HomeController extends Controller
         {
             $requestArray['activities_image'] = $this->storeFile($request->activities_images);
         }
-        if(isset($request->statement_enrolments))
+        if(isset($request->Statement_enrolments))
         {
-            $requestArray['Statement_enrolment'] = $this->storeFile($request->statement_enrolments);
+            $requestArray['Statement_enrolment'] = $this->storeFile($request->Statement_enrolments);
         }
 
        if(isset($request->Transfers))
@@ -408,9 +408,9 @@ class HomeController extends Controller
             $requestArray['Transfer'] = $this->storeFile($request->Transfers);
         }
 
-        if(isset($request->transfers))
+        if(isset($request->transferss))
         {
-            $requestArray['transfers'] = $this->storeFile($request->transfers);
+            $requestArray['transfers'] = $this->storeFile($request->transferss);
         }
 
         if(isset($request->Printouts))
@@ -464,6 +464,7 @@ class HomeController extends Controller
         }else{
             unset($requestArray['password']);
         }
+        // return  $requestArray ;
         $student =  Student::findOrFail($id);
         $student->update($requestArray) ;
         session(['student_photo' => $student->photo]);
